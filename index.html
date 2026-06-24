@@ -59,7 +59,7 @@ section{padding:72px 0;}
 .founder-name{font-weight:800;color:var(--navy);font-size:1.2rem;}
 .founder-role{color:var(--teal-dark);font-weight:600;margin-bottom:24px;}
 .motto{text-align:center;font-size:1.8rem;font-weight:800;letter-spacing:2px;color:var(--orange);margin-top:30px;}
-.paths{display:grid;grid-template-columns:1fr 1fr;gap:30px;}
+.paths{display:flex;justify-content:center;flex-wrap:wrap;gap:30px;}.paths .path-card{max-width:460px;width:100%;}
 .path-card{background:#fff;border-radius:14px;padding:38px 32px;text-align:center;box-shadow:0 8px 26px rgba(0,0,0,.07);border-top:6px solid var(--blue);}
 .path-card.invest{border-top-color:var(--orange);}
 .path-card h3{font-size:1.5rem;margin-bottom:14px;color:var(--navy);}
@@ -96,10 +96,10 @@ nav ul{gap:16px;}
 <body>
 <header>
 <div class="nav">
-<div class="brand">
+<a class="brand" href="/" aria-label="Ever Roll Fund home">
 <img src="logo.png" alt="Ever Roll Fund logo">
 <span class="brand-name"><span class="ever">EVER</span> <span class="roll">ROLL</span> <span class="fund">FUND</span></span>
-</div>
+</a>
 <nav>
 <ul>
 <li><a href="#mission">Mission</a></li>
