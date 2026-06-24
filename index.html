@@ -32,7 +32,10 @@ nav ul li a{color:var(--ink);font-weight:600;font-size:.95rem;}
 nav ul li a:hover{color:var(--blue-dark);}
 .nav-donate{padding:10px 24px;border-radius:40px;background:var(--orange);color:#fff;font-weight:800;letter-spacing:.5px;}
 .nav-donate:hover{background:var(--orange-dark);color:#fff;}
-.hero{background:linear-gradient(135deg,#0f2a4a 0%,#174ea6 60%,#1aa6a0 100%);color:#fff;padding:90px 0 80px;text-align:center;}
+.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#0f2a4a 0%,#174ea6 60%,#1aa6a0 100%);color:#fff;padding:90px 0 80px;text-align:center;}
+.hero-video{position:absolute;top:50%;left:50%;min-width:100%;min-height:100%;width:auto;height:auto;transform:translate(-50%,-50%);object-fit:cover;z-index:0;}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(15,42,74,.72),rgba(23,78,166,.55) 60%,rgba(26,166,160,.55));z-index:1;}
+.hero .container{position:relative;z-index:2;}
 .hero img.hero-logo{height:150px;margin:0 auto 24px;background:#fff;border-radius:50%;padding:10px;}
 .hero h1{font-size:2.6rem;line-height:1.2;margin-bottom:14px;color:#fff;}
 .tagline{font-size:1.5rem;font-style:italic;color:#dbe9ff;font-weight:600;margin-bottom:28px;}
@@ -113,6 +116,10 @@ nav ul{gap:16px;}
 </div>
 </header>
 <section class="hero">
+<video class="hero-video" autoplay muted loop playsinline preload="auto" poster="logo.png">
+<source src="Ever%20Roll%20Fund%20Background%20Video.mp4" type="video/mp4">
+</video>
+<div class="hero-overlay"></div>
 <div class="container">
 <img class="hero-logo" src="logo.png" alt="Ever Roll Fund logo">
 <h1>Ever Roll Fund</h1>
