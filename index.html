@@ -94,6 +94,22 @@ nav ul{gap:16px;}
 .footer-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 26px;list-style:none;margin:22px 0 4px;padding:0;}
 .footer-nav li a{color:#cdd6e0;font-weight:600;font-size:.95rem;}
 .footer-nav li a:hover{color:var(--orange);}
+    .nav-toggle{display:none;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;background:none;border:none;cursor:pointer;padding:8px;margin-left:auto;}
+    .nav-toggle span{display:block;width:26px;height:3px;border-radius:3px;background:var(--ink);transition:transform .25s ease,opacity .25s ease;}
+    .nav-toggle.open span:nth-child(1){transform:translateY(8px) rotate(45deg);}
+    .nav-toggle.open span:nth-child(2){opacity:0;}
+    .nav-toggle.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg);}
+    @media(max-width:760px){
+      .nav{flex-wrap:nowrap;}
+      .nav-toggle{display:flex;}
+      #primary-nav{position:absolute;top:100%;right:0;left:0;background:rgba(255,255,255,.98);backdrop-filter:blur(6px);box-shadow:0 8px 18px rgba(0,0,0,.08);max-height:0;overflow:hidden;transition:max-height .3s ease;}
+      #primary-nav.open{max-height:520px;}
+      #primary-nav ul{flex-direction:column;align-items:stretch;gap:0;padding:8px 0;}
+      #primary-nav ul li{width:100%;}
+      #primary-nav ul li a{display:block;padding:14px 24px;font-size:1.05rem;}
+      #primary-nav ul li.nav-donate{margin:10px 24px;text-align:center;}
+      #primary-nav ul li.nav-donate a{padding:0;}
+    }
 </style>
 </head>
 <body>
@@ -103,7 +119,8 @@ nav ul{gap:16px;}
 <img src="logo.png" alt="Ever Roll Fund logo">
 <span class="brand-name"><span class="ever">EVER</span> <span class="roll">ROLL</span> <span class="fund">FUND</span></span>
 </a>
-<nav>
+<button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+<nav id="primary-nav">
 <ul>
 <li><a href="#mission">Mission</a></li>
 <li><a href="#problem">The Problem</a></li>
@@ -242,5 +259,21 @@ nav ul{gap:16px;}
 <p>&copy; 2026 Ever Roll Fund. All rights reserved.</p>
 <p class="footer-501">Ever Roll Fund is a registered 501(c)(3) nonprofit; your gift is tax-deductible.</p>
 </footer>
+  <script>
+    (function(){
+      var btn=document.querySelector(".nav-toggle");
+      var nav=document.getElementById("primary-nav");
+      if(btn&&nav){
+        btn.addEventListener("click",function(){
+          var open=nav.classList.toggle("open");
+          btn.classList.toggle("open",open);
+          btn.setAttribute("aria-expanded",open?"true":"false");
+        });
+        nav.addEventListener("click",function(e){
+          if(e.target.closest("a")){nav.classList.remove("open");btn.classList.remove("open");btn.setAttribute("aria-expanded","false");}
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
