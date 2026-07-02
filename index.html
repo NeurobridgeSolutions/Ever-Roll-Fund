@@ -125,9 +125,9 @@ nav ul{gap:16px;}
     .sci-fact-content { position: relative; overflow: hidden; background: linear-gradient(180deg, rgba(26,166,160,0.10), rgba(26,166,160,0.04)); border: 1px solid rgba(26,166,160,0.35); border-radius: 12px; padding: 28px 44px; display: flex; flex-direction: column; align-items: center; gap: 10px; max-width: 800px; width: 100%; text-align: center; box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
     .sci-fact-content::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, rgba(26,166,160,0.6), transparent); animation: sci-shimmer 3s ease-in-out infinite; }
     .sci-fact-label { font-size: 14px; font-weight: 700; color: #1aa6a0; letter-spacing: 1.5px; text-transform: uppercase; }
-    .sci-fact-text { color: var(--ink, #1b2733); font-size: 1.2rem; font-weight: 500; margin: 0; min-height: 3.2em; display: flex; align-items: center; justify-content: center; transition: opacity 0.6s ease-in-out; }
-    .sci-fact-text.fade-out { opacity: 0; }
-    .sci-fact-text.fade-in { opacity: 1; }
+    .sci-fact-text { color: var(--ink, #1b2733); font-size: 1.2rem; font-weight: 500; margin: 0; min-height: 3.2em; display: flex; align-items: center; justify-content: center; transition: opacity 0.6s ease-in-out, filter 0.6s ease-in-out, transform 0.6s ease-in-out; }
+    .sci-fact-text.fade-out { opacity: 0; filter: blur(6px); transform: scale(1.04); }
+    .sci-fact-text.fade-in { opacity: 1; filter: blur(0); transform: scale(1); }
     @keyframes sci-shimmer { 0% { transform: translateX(-30%); } 50% { transform: translateX(30%); } 100% { transform: translateX(-30%); } }
     @media (max-width: 640px) { .sci-fact-content { padding: 20px 22px; } .sci-fact-text { font-size: 1rem; } }
   </style>
@@ -172,12 +172,12 @@ nav ul{gap:16px;}
     <section class="sci-fact-banner" aria-label="Spinal cord injury facts">
       <div class="sci-fact-content">
         <span class="sci-fact-label">Did You Know?</span>
-        <p class="sci-fact-text fade-in" id="sci-fact-text" aria-live="polite">Even when insurance covers a device, patients are often left with a large out-of-pocket bill.</p>
+        <p class="sci-fact-text fade-in" id="sci-fact-text" aria-live="polite">Every 45 minutes, someone in the U.S. sustains a new spinal cord injury.</p>
       </div>
     </section>
     <script>
       (function(){
-        var facts = ["Even when insurance covers a device, patients are often left with a large out-of-pocket bill.","The equipment that restores independence is frequently the hardest to afford.","Many advanced wheelchairs cost $30,000–$50,000 — often only partially covered by insurance.","Insurers routinely deny power wheelchairs as 'not medically necessary' for use outside the home.","Standing frames and exoskeletons are frequently classified as 'experimental' and denied outright.","Medicare's 'in-the-home' rule can block coverage for mobility devices needed in the community.","Coverage denials force many families to fundraise or take on debt for essential equipment.","Insurance often caps durable medical equipment, leaving recurring costs uncovered.","A single specialized cushion to prevent pressure sores can cost hundreds out of pocket.","Replacement parts and repairs for wheelchairs are commonly excluded from coverage.","First-year costs for the most severe spinal cord injuries can exceed $1.2 million.","Lifetime costs of a high-level SCI can surpass $5 million — far beyond most coverage limits.","Adaptive vehicle modifications can cost $20,000–$80,000 and are rarely covered by insurance.","Home accessibility renovations like ramps and lifts are almost never reimbursed.","Assistive technology that enables employment often falls outside insurance coverage.","About 60% of people with an SCI are unemployed, deepening the funding gap.","Appeals for denied equipment can take months, delaying access to critical devices.","Communication and environmental-control devices are frequently deemed non-covered 'convenience' items.","Grants and nonprofits fill the gap when insurance falls short — but demand far exceeds funding.","Ever Roll Fund helps connect people to the grants that make uncovered devices affordable."];
+        var facts = ["Every 45 minutes, someone in the U.S. sustains a new spinal cord injury.","Nearly 1 in 4 spinal cord injuries happens to someone under the age of 25.","A single power wheelchair can cost more than a brand-new car.","Roughly 5.4 million Americans live with some form of paralysis — about 1 in every 50 people.","The lifetime cost of a high-level spinal cord injury can exceed $5 million.","A person injured at age 25 faces first-year care costs of over $1.2 million.","Most people can't name the leading cause of SCI — it's vehicle crashes, closely followed by falls.","Falls are now the fastest-growing cause of spinal cord injury.","78% of new spinal cord injuries happen to men.","Only about 30% of people with a spinal cord injury are employed after their injury.","Fewer than 1% of SCI patients fully recover neurological function by the time they leave the hospital.","Insurance often labels the very device that restores independence as 'not medically necessary.'","Standing frames and exoskeletons are frequently denied as 'experimental' — even when they work.","Medicare's 'in-the-home' rule can deny a wheelchair simply because it's meant for use outside.","A specialized cushion that prevents life-threatening pressure sores can cost hundreds — uncovered.","Adapting a single vehicle for a wheelchair user can cost as much as $80,000.","The average age at spinal cord injury has climbed from 29 to 43 over recent decades.","Secondary complications send nearly 30% of people with SCI back to the hospital every year.","For many families, the hardest part of an injury isn't the diagnosis — it's the bill.","One grant for the right device can be the difference between dependence and independence."];
         var el = document.getElementById('sci-fact-text');
         if(!el) return;
         var i = 0;
@@ -190,7 +190,7 @@ nav ul{gap:16px;}
             el.textContent = facts[i];
             el.classList.remove('fade-out'); el.classList.add('fade-in');
           }, 600);
-        }, 5000);
+        }, 4000);
       })();
     </script>
 
