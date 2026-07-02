@@ -125,9 +125,9 @@ nav ul{gap:16px;}
     .sci-fact-content { position: relative; overflow: hidden; background: linear-gradient(180deg, rgba(26,166,160,0.10), rgba(26,166,160,0.04)); border: 1px solid rgba(26,166,160,0.35); border-radius: 12px; padding: 28px 44px; display: flex; flex-direction: column; align-items: center; gap: 10px; max-width: 800px; width: 100%; text-align: center; box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
     .sci-fact-content::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, rgba(26,166,160,0.6), transparent); animation: sci-shimmer 3s ease-in-out infinite; }
     .sci-fact-label { font-size: 14px; font-weight: 700; color: #1aa6a0; letter-spacing: 1.5px; text-transform: uppercase; }
-    .sci-fact-text { color: var(--ink, #1b2733); font-size: 1.2rem; font-weight: 500; margin: 0; min-height: 3.2em; display: flex; align-items: center; justify-content: center; transition: opacity 0.6s ease-in-out, filter 0.6s ease-in-out, transform 0.6s ease-in-out; }
-    .sci-fact-text.fade-out { opacity: 0; filter: blur(6px); transform: scale(1.04); }
-    .sci-fact-text.fade-in { opacity: 1; filter: blur(0); transform: scale(1); }
+    .sci-fact-text { color: var(--ink, #1b2733); font-size: 1.2rem; font-weight: 500; margin: 0; min-height: 3.2em; display: flex; align-items: center; justify-content: center; transition: opacity 0.75s ease-in-out, filter 0.75s ease-in-out, transform 0.75s ease-in-out; }
+    .sci-fact-text.fade-out { opacity: 0; filter: blur(12px); transform: scale(1.10) translateY(-6px); }
+    .sci-fact-text.fade-in { opacity: 1; filter: blur(0); transform: scale(1) translateY(0); }
     @keyframes sci-shimmer { 0% { transform: translateX(-30%); } 50% { transform: translateX(30%); } 100% { transform: translateX(-30%); } }
     @media (max-width: 640px) { .sci-fact-content { padding: 20px 22px; } .sci-fact-text { font-size: 1rem; } }
   </style>
@@ -177,7 +177,7 @@ nav ul{gap:16px;}
     </section>
     <script>
       (function(){
-        var facts = ["Every 45 minutes, someone in the U.S. sustains a new spinal cord injury.","Nearly 1 in 4 spinal cord injuries happens to someone under the age of 25.","A single power wheelchair can cost more than a brand-new car.","Roughly 5.4 million Americans live with some form of paralysis — about 1 in every 50 people.","The lifetime cost of a high-level spinal cord injury can exceed $5 million.","A person injured at age 25 faces first-year care costs of over $1.2 million.","Most people can't name the leading cause of SCI — it's vehicle crashes, closely followed by falls.","Falls are now the fastest-growing cause of spinal cord injury.","78% of new spinal cord injuries happen to men.","Only about 30% of people with a spinal cord injury are employed after their injury.","Fewer than 1% of SCI patients fully recover neurological function by the time they leave the hospital.","Insurance often labels the very device that restores independence as 'not medically necessary.'","Standing frames and exoskeletons are frequently denied as 'experimental' — even when they work.","Medicare's 'in-the-home' rule can deny a wheelchair simply because it's meant for use outside.","A specialized cushion that prevents life-threatening pressure sores can cost hundreds — uncovered.","Adapting a single vehicle for a wheelchair user can cost as much as $80,000.","The average age at spinal cord injury has climbed from 29 to 43 over recent decades.","Secondary complications send nearly 30% of people with SCI back to the hospital every year.","For many families, the hardest part of an injury isn't the diagnosis — it's the bill.","One grant for the right device can be the difference between dependence and independence."];
+        var facts = ["Every 45 minutes, someone in the U.S. sustains a new spinal cord injury.","The lifetime cost of a spinal cord injury can exceed $5 million.","5.4 million Americans live with paralysis — about 1 in every 50 people.","A single power wheelchair can cost over $40,000 — more than a brand-new car.","First-year care after a spinal cord injury can top $1.2 million.","Nearly 1 in 4 spinal cord injuries happens to someone under age 25.","About 18,000 new spinal cord injuries occur in the U.S. every year.","302,000 people in the U.S. are living with a spinal cord injury right now.","78% of new spinal cord injuries happen to men.","Only 30% of people with a spinal cord injury are employed after their injury.","Fewer than 1% of SCI patients fully recover neurological function before leaving the hospital.","Adapting 1 vehicle for a wheelchair user can cost as much as $80,000.","Nearly 30% of people with SCI are re-hospitalized at least once every year.","The average age at spinal cord injury has climbed from 29 to 43.","1 specialized cushion to prevent pressure sores can cost hundreds — and go uncovered.","Over 50% of standing frames and exoskeletons are denied by insurers as 'experimental.'","Home accessibility upgrades can run $10,000–$100,000, and are almost never reimbursed.","Insurance appeals for a denied device can take 3 to 6 months to resolve.","Falls now cause over 30% of new spinal cord injuries — and the share is rising.","1 grant for the right device can be the difference between dependence and independence."];
         var el = document.getElementById('sci-fact-text');
         if(!el) return;
         var i = 0;
@@ -189,7 +189,7 @@ nav ul{gap:16px;}
           setTimeout(function(){
             el.textContent = facts[i];
             el.classList.remove('fade-out'); el.classList.add('fade-in');
-          }, 600);
+          }, 750);
         }, 4000);
       })();
     </script>
