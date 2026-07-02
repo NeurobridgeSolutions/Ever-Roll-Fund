@@ -119,6 +119,17 @@ nav ul{gap:16px;}
     .erf-thankyou p{color:var(--ink);font-size:1.05rem;max-width:460px;margin:0 auto;}
     .erf-thankyou .erf-check{font-size:3rem;line-height:1;margin-bottom:8px;}
     @keyframes erfFade{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:none;}}
+
+    /* Rolling SCI statistics ticker */
+    .sci-stats { background: #1aa6a0; color: #ffffff; overflow: hidden; padding: 0.9rem 0; white-space: nowrap; }
+    .sci-stats-track { display: inline-flex; will-change: transform; animation: sci-scroll 40s linear infinite; }
+    .sci-stats-group { display: inline-flex; align-items: center; }
+    .sci-stat { display: inline-flex; align-items: center; padding: 0 2.5rem; font-size: 1rem; line-height: 1.4; }
+    .sci-stat strong { font-weight: 700; margin-right: 0.4rem; }
+    .sci-stat::after { content: "\2022"; margin-left: 2.5rem; opacity: 0.6; }
+    .sci-stats:hover .sci-stats-track { animation-play-state: paused; }
+    @keyframes sci-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    @media (prefers-reduced-motion: reduce) { .sci-stats-track { animation: none; } .sci-stats { overflow-x: auto; } }
 </style>
 </head>
 <body>
@@ -157,7 +168,29 @@ nav ul{gap:16px;}
 <p class="hero-501">Ever Roll Fund is a registered 501(c)(3) nonprofit; your gift is tax-deductible.</p>
 </div>
 </section>
-<section id="mission" class="mission">
+<!-- Rolling SCI statistics ticker -->
+    <section class="sci-stats" aria-label="Spinal cord injury statistics">
+      <div class="sci-stats-track">
+        <div class="sci-stats-group">
+      <span class="sci-stat"><strong>~18,000</strong> new spinal cord injuries in the U.S. each year</span>
+      <span class="sci-stat"><strong>~302,000</strong> people in the U.S. currently live with an SCI</span>
+      <span class="sci-stat"><strong>43</strong> average age at time of injury</span>
+      <span class="sci-stat"><strong>78%</strong> of new SCI cases are male</span>
+      <span class="sci-stat"><strong>#1</strong> cause of SCI is vehicle crashes, followed by falls</span>
+      <span class="sci-stat"><strong>$1.2M+</strong> estimated first-year cost for high-level injuries</span>
+        </div>
+        <div class="sci-stats-group" aria-hidden="true">
+      <span class="sci-stat"><strong>~18,000</strong> new spinal cord injuries in the U.S. each year</span>
+      <span class="sci-stat"><strong>~302,000</strong> people in the U.S. currently live with an SCI</span>
+      <span class="sci-stat"><strong>43</strong> average age at time of injury</span>
+      <span class="sci-stat"><strong>78%</strong> of new SCI cases are male</span>
+      <span class="sci-stat"><strong>#1</strong> cause of SCI is vehicle crashes, followed by falls</span>
+      <span class="sci-stat"><strong>$1.2M+</strong> estimated first-year cost for high-level injuries</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="mission" class="mission">
 <div class="container">
 <h2 class="section-title">Our <span class="accent">Mission</span></h2>
 <p>To improve the quality of life for those with a physical disability by providing resources to access medical innovation and funding for devices insurance won't cover, so the disabled can regain independence and return to normalcy.</p>
