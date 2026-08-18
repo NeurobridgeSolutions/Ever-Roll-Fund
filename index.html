@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ever Roll Fund &mdash; Disability Doesn't Mean Inability</title>   
-    <meta property="og:title" content="Ever Roll Fund — Disability Doesn't Mean Inability">
+<title>Ever Roll Fund - Disability Doesn't Mean Inability</title>   
+    <meta property="og:title" content="Ever Roll Fund - Disability Doesn't Mean Inability">
     <meta property="og:description" content="Partner with us to grow a fund that gives back for the disabled community.">
     <meta property="og:image" content="https://everrollfund.org/logo.png">
     <meta property="og:url" content="https://everrollfund.org/">
@@ -119,6 +119,20 @@ nav ul{gap:16px;}
     }
     #erf-schedule-fab{position:fixed;right:24px;bottom:24px;z-index:2147483647;background:#f0a830;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:bold;text-decoration:none;padding:14px 22px;border-radius:50px;box-shadow:0 4px 14px rgba(0,0,0,0.25);transition:transform 0.15s ease,box-shadow 0.15s ease;}
     #erf-schedule-fab:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,0.3);}
+
+    #erf-reach-fab{position:fixed;left:20px;top:50%;transform:translateY(-50%);z-index:2147483646;display:inline-flex;align-items:center;gap:9px;min-height:48px;background:#1aa6a0;color:#ffffff;font-family:'Segoe UI',Helvetica,Arial,sans-serif;font-size:15px;font-weight:700;letter-spacing:.3px;text-decoration:none;padding:13px 21px;border-radius:50px;box-shadow:0 4px 14px rgba(0,0,0,.25);transition:transform .15s ease,box-shadow .15s ease,background .15s ease,opacity .25s ease,visibility .25s ease;}
+    #erf-reach-fab:hover{background:#127f7a;transform:translateY(-50%) scale(1.04);box-shadow:0 6px 18px rgba(0,0,0,.3);}
+    #erf-reach-fab:focus-visible{outline:3px solid #0f2a4a;outline-offset:3px;}
+    #erf-reach-fab svg{flex:0 0 auto;width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+    #erf-reach-fab.is-hidden{opacity:0;visibility:hidden;pointer-events:none;}
+    @media (max-width:780px){
+      #erf-reach-fab{top:auto;bottom:24px;left:16px;transform:none;font-size:13px;padding:12px 15px;gap:7px;}
+      #erf-reach-fab:hover{transform:none;}
+    }
+    @media (prefers-reduced-motion:reduce){
+      #erf-reach-fab{transition:none;}
+      #erf-reach-fab:hover{transform:translateY(-50%);}
+    }
     #erf-confetti-canvas{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:2147483646;display:none;}
     .erf-thankyou{display:none;text-align:center;padding:40px 24px;animation:erfFade .5s ease;}
     .erf-thankyou.show{display:block;}
@@ -152,7 +166,6 @@ nav ul{gap:16px;}
 <li><a href="#mission">Mission</a></li>
 <li><a href="#problem">The Problem</a></li>
 <li><a href="#about">Our Story</a></li>
-<li><a href="#get-involved">Get Involved</a></li>
 <li><a href="#contact">Contact</a></li>
 <!-- TEMP: donate hidden pending IRS verification -->
 <!-- <li><a href="https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-16626" target="_blank" rel="noopener" class="nav-donate">DONATE</a></li> -->
@@ -186,7 +199,7 @@ nav ul{gap:16px;}
     </section>
     <script>
       (function(){
-        var facts = ["Every 45 minutes, someone in the U.S. sustains a new spinal cord injury.","The lifetime cost of a spinal cord injury can exceed $5 million.","5.4 million Americans live with paralysis — about 1 in every 50 people.","A single power wheelchair can cost over $40,000 — more than a brand-new car.","First-year care after a spinal cord injury can top $1.2 million.","Nearly 1 in 4 spinal cord injuries happens to someone under age 25.","About 18,000 new spinal cord injuries occur in the U.S. every year.","302,000 people in the U.S. are living with a spinal cord injury right now.","78% of new spinal cord injuries happen to men.","Only 30% of people with a spinal cord injury are employed after their injury.","Fewer than 1% of SCI patients fully recover neurological function before leaving the hospital.","Adapting 1 vehicle for a wheelchair user can cost as much as $80,000.","Nearly 30% of people with SCI are re-hospitalized at least once every year.","The average age at spinal cord injury has climbed from 29 to 43.","1 specialized cushion to prevent pressure sores can cost hundreds — and go uncovered.","Over 50% of standing frames and exoskeletons are denied by insurers as 'experimental.'","Home accessibility upgrades can run $10,000–$100,000, and are almost never reimbursed.","Insurance appeals for a denied device can take 3 to 6 months to resolve.","Falls now cause over 30% of new spinal cord injuries — and the share is rising.","1 grant for the right device can be the difference between dependence and independence."];
+        var facts = ["Every 45 minutes, someone in the U.S. sustains a new spinal cord injury.","The lifetime cost of a spinal cord injury can exceed $5 million.","5.4 million Americans live with paralysis - about 1 in every 50 people.","A single power wheelchair can cost over $40,000 - more than a brand-new car.","First-year care after a spinal cord injury can top $1.2 million.","Nearly 1 in 4 spinal cord injuries happens to someone under age 25.","About 18,000 new spinal cord injuries occur in the U.S. every year.","302,000 people in the U.S. are living with a spinal cord injury right now.","78% of new spinal cord injuries happen to men.","Only 30% of people with a spinal cord injury are employed after their injury.","Fewer than 1% of SCI patients fully recover neurological function before leaving the hospital.","Adapting 1 vehicle for a wheelchair user can cost as much as $80,000.","Nearly 30% of people with SCI are re-hospitalized at least once every year.","The average age at spinal cord injury has climbed from 29 to 43.","1 specialized cushion to prevent pressure sores can cost hundreds - and go uncovered.","Over 50% of standing frames and exoskeletons are denied by insurers as 'experimental.'","Home accessibility upgrades can run $10,000-$100,000, and are almost never reimbursed.","Insurance appeals for a denied device can take 3 to 6 months to resolve.","Falls now cause over 30% of new spinal cord injuries - and the share is rising.","1 grant for the right device can be the difference between dependence and independence."];
         var el = document.getElementById('sci-fact-text');
         if(!el) return;
         var i = 0;
@@ -212,7 +225,7 @@ nav ul{gap:16px;}
 <section id="problem" class="bg-soft">
 <div class="container">
 <h2 class="section-title">The <span class="accent">Problem</span></h2>
-<p class="section-sub">For many patients, the hardest part isn't finding the right equipment &mdash; it's paying for it.</p>
+<p class="section-sub">For many patients, the hardest part isn't finding the right equipment - it's paying for it.</p>
 <div class="problem-grid">
 <div class="problem-card">
 <h3>The funding gap</h3>
@@ -234,8 +247,8 @@ nav ul{gap:16px;}
 </div>
 <p class="founder-name">Kortlund Natterstad</p>
 <p class="founder-role">Director at the Ever Roll Fund</p>
-<p>Kortlund Natterstad has always been driven by a desire to help others. That drive first led him into medical device sales, where he supported surgeons and patients inside the operating room. His life shifted suddenly after a serious off-roading accident left him with a spinal cord injury affecting everything from his chest down. After two surgeries ten days apart and six weeks of intensive rehabilitation at Craig Hospital, Kort began navigating his new reality &mdash; learning to adapt, accept support, and rebuild his sense of purpose. His wife, Natalia, has been an integral part of that journey, supporting him daily.</p>
-<p>Kort re-entered the medical field through spinal cord injury research with the North American Spinal Cord Injury Consortium (NASCIC), where he continues to consult on corporate sponsor engagement and member education. He also consults with UI Medical (QuickChange Wrap for men) and Symmetric Designs, helping them shape their messages to include perspectives from individuals with lived experience. Today, he co-leads NeuroBridge Solutions alongside Natalia &mdash; a venture that brings both clinical insight and lived experience to individuals and organizations through consulting, advocacy, and education.</p>
+<p>Kortlund Natterstad has always been driven by a desire to help others. That drive first led him into medical device sales, where he supported surgeons and patients inside the operating room. His life shifted suddenly after a serious off-roading accident left him with a spinal cord injury affecting everything from his chest down. After two surgeries ten days apart and six weeks of intensive rehabilitation at Craig Hospital, Kort began navigating his new reality - learning to adapt, accept support, and rebuild his sense of purpose. His wife, Natalia, has been an integral part of that journey, supporting him daily.</p>
+<p>Kort re-entered the medical field through spinal cord injury research with the North American Spinal Cord Injury Consortium (NASCIC), where he continues to consult on corporate sponsor engagement and member education. He also consults with UI Medical (QuickChange Wrap for men) and Symmetric Designs, helping them shape their messages to include perspectives from individuals with lived experience. Today, he co-leads NeuroBridge Solutions alongside Natalia - a venture that brings both clinical insight and lived experience to individuals and organizations through consulting, advocacy, and education.</p>
 <p>Kort continues to approach life with resilience, a strong support system, and the belief in taking things one day at a time. He enjoys playing adaptive pickleball, working out in the pool, and spending time with his lovely wife, Natalia. He is a die-hard Minnesota Vikings fan with the goal of seeing them play in every stadium and has been to 16 so far. His motto guides both his work and the encouragement he offers others as they adjust to life after injury.</p>
 <p class="motto">&ldquo;NEVER QUIT&rdquo;</p>
 </div>
@@ -249,9 +262,9 @@ nav ul{gap:16px;}
 <p class="founder-name">Natalia Natterstad</p>
 <p class="founder-role">Director at the Ever Roll Fund</p>
 <p>Natalia Natterstad is originally from Moldova, a small country in Eastern Europe. She studied hard throughout school and, upon graduating from university, was granted a work-exchange program visa. Her first time in America was in Newport, Rhode Island, where she worked at a small hotel without knowing a single word of English.</p>
-<p>Over time, her English improved, and her work took her across the country &mdash; Wisconsin, South Carolina, Alaska, Florida, and beyond. Working in hospitality meant relocating every six months to wherever the opportunity was strongest. Eventually, Natalia made the pivotal decision to stay in America and build a life rooted in liberty and freedom. She is multilingual, speaking Romanian, Russian, Spanish, some French, and English.</p>
-<p>Just over three years ago, Natalia and Kortlund met on a dating app. They talked nearly every day for three weeks before meeting in person &mdash; and the rest, as they say, is history. They have been happily married for just over a year.</p>
-<p>At the start of 2026, inspired by Kort&rsquo;s story and the gap she saw in the SCI ecosystem, Natalia proposed building a company to deliver lived-experience consulting to organizations serving people with spinal cord injuries. That conversation became NeuroBridge Solutions Inc. Every day, Natalia and Kort push each other and the company forward &mdash; turning a deeply personal mission into a platform that helps thousands.</p>
+<p>Over time, her English improved, and her work took her across the country - Wisconsin, South Carolina, Alaska, Florida, and beyond. Working in hospitality meant relocating every six months to wherever the opportunity was strongest. Eventually, Natalia made the pivotal decision to stay in America and build a life rooted in liberty and freedom. She is multilingual, speaking Romanian, Russian, Spanish, some French, and English.</p>
+<p>Just over three years ago, Natalia and Kortlund met on a dating app. They talked nearly every day for three weeks before meeting in person - and the rest, as they say, is history. They have been happily married for just over a year.</p>
+<p>At the start of 2026, inspired by Kort&rsquo;s story and the gap she saw in the SCI ecosystem, Natalia proposed building a company to deliver lived-experience consulting to organizations serving people with spinal cord injuries. That conversation became NeuroBridge Solutions Inc. Every day, Natalia and Kort push each other and the company forward - turning a deeply personal mission into a platform that helps thousands.</p>
 </div>
 </section>
     <section id="ryan" class="bg-soft">
@@ -265,19 +278,6 @@ nav ul{gap:16px;}
         <p>Ryan Gebauer has led a very interesting life. In June 1995, when he was only 16 years old, Ryan and his friends were climbing a tree in his neighborhood, as teenagers often do. When Ryan jumped out of that tree into the lake below, his world was changed forever. Ryan lost his balance, landed in the water, breaking his neck at the C3-4 level and leaving him paralyzed. He was hospitalized for six months following his injury. During that time, he had numerous surgeries, went through rehabilitation, and generally learned how to live as a quadriplegic.</p><p>Since that day, he has been a quadriplegic, paralyzed from the neck down. While many would simply give up, Ryan made another choice. He chose to get better rather than bitter. With that positive attitude, in 2008 he received a Master's in Business Administration after receiving a Bachelor's of Arts in Political Science, Criminal Justice, and Business, a real estate license in 2004, became an advocate for the disabled, and became a pillar of the community. Ryan was forced in the harshest manner and at a very early age to learn to overcome obstacles, and with that knowledge, he helps people.</p><p>While Ryan was mentoring, volunteering, and building the Spinal Cord Injury Support Group of South Florida, he learned about the hardships members were facing in trying to obtain accessible properties.</p><p>It was at this time that Ryan saw an opportunity to put his education and energy to use by working for a local real estate brokerage to change the perception of an industry dominated by able-bodied agents.</p><p>This "NEVER GIVE UP!" quality pushed Ryan to another challenge; Ryan started the first real estate brokerage in the U.S. that specializes in assisting individuals with a disability to obtain a property. Additionally, it's the first brokerage to be run by an individual with a disability.</p><p>Today, Ryan is the principal broker at Ryan Realty Group, located in Coral Springs, Fla., where he works with sellers, buyers, landlords, and tenants throughout South Florida. Ryan Realty Group specializes in working with disabled clients and seniors, and has an in-depth knowledge of properties that meet the specialized needs of the disabled and aging communities. We are blessed to have Ryan as an impactful director for the Ever Roll Fund. His energy, intuition, and experience are all valuable traits we are lucky to have.</p>
       </div>
     </section>
-<section id="get-involved" class="bg-soft">
-<div class="container">
-<h2 class="section-title">Get <span class="accent">Involved</span></h2>
-<p class="section-sub">Whether you need support or want to help provide it, there's a place for you here.</p>
-<div class="paths">
-<div class="path-card">
-<h3>For Those in Need</h3>
-<p>If you or someone you care for is living with a spinal cord injury or physical disability, we can help you navigate grants and resources to fund the assistive devices that restore independence.</p>
-<a href="#contact" class="btn btn-teal">Reach Out</a>
-</div>
-</div>
-</div>
-</section>
 <section id="contact">
 <div class="container">
 <h2 class="section-title">Contact <span class="accent">Us</span></h2>
@@ -322,7 +322,6 @@ nav ul{gap:16px;}
 <li><a href="#mission">Mission</a></li>
 <li><a href="#problem">The Problem</a></li>
 <li><a href="#about">Our Story</a></li>
-<li><a href="#get-involved">Get Involved</a></li>
 <li><a href="#contact">Contact</a></li>
 <li><a href="/Ever%20Roll%20Fund%20-%20Privacy%20Policy.pdf" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
 <li><a href="/Ever%20Roll%20Fund%20-%20Terms%20of%20Service.pdf" target="_blank" rel="noopener noreferrer">Terms of Service</a></li><li><a href="/accessibility.html" target="_blank" rel="noopener noreferrer">Accessibility</a></li>
@@ -349,6 +348,10 @@ nav ul{gap:16px;}
       }
     })();
   </script>
+  <a id="erf-reach-fab" href="#contact" aria-label="Need funding help? Contact Ever Roll Fund about grants for assistive devices">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.9 8.9 0 0 1-4.1-1L3 20l1.2-4.6A8.4 8.4 0 0 1 3 11.5 8.4 8.4 0 0 1 11.5 3h.5a8.4 8.4 0 0 1 9 8.5z"/></svg>
+    <span>Need Funding Help</span>
+  </a>
   <a id="erf-schedule-fab"
      href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2tcGKfzdGPIg9BMha3yxOii_8UDOYUolz_43DezM04lcednRzSevhuQhBdEvBx5sFCxbCKffP-"
      target="_blank" rel="noopener noreferrer">Schedule a Time</a>
@@ -413,5 +416,16 @@ nav ul{gap:16px;}
     }
   })();
   </script>
+
+<script>
+(function(){
+  var fab = document.getElementById('erf-reach-fab');
+  var contact = document.getElementById('contact');
+  if(!fab || !contact || !('IntersectionObserver' in window)) return;
+  new IntersectionObserver(function(entries){
+    fab.classList.toggle('is-hidden', entries[0].isIntersecting);
+  }, {threshold: 0.25}).observe(contact);
+})();
+</script>
 </body>
 </html>
