@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Equipment Grant Application - Ever Roll Fund</title>
+<meta name="description" content="Apply for an Ever Roll Fund equipment grant. No tax returns, no pay stubs. Tell us what you need, what insurance did, and what your situation is.">
+<meta property="og:title" content="Equipment Grant Application - Ever Roll Fund">
+<meta property="og:description" content="Mobility, made affordable. Apply for help closing the gap insurance leaves behind.">
+<meta property="og:image" content="https://everrollfund.org/logo.png">
+<meta property="og:url" content="https://everrollfund.org/apply.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://everrollfund.org/logo.png">
+<link rel="icon" type="image/png" href="/logo.png">
+<link rel="apple-touch-icon" href="/logo.png">
+<style>
+:root{--blue:#1f6feb;--blue-dark:#174ea6;--navy:#0f2a4a;--teal:#1aa6a0;--teal-dark:#127f7a;--orange:#f0a93f;--orange-dark:#d8902a;--ink:#1b2733;--muted:#5b6671;--bg:#ffffff;--bg-soft:#eef4fb;--line:#cdd6e0;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Segoe UI',Helvetica,Arial,sans-serif;color:var(--ink);line-height:1.6;background:var(--bg-soft);}
+a{color:var(--blue-dark);text-decoration:none;}
+img{max-width:100%;display:block;}
+.container{max-width:1080px;margin:0 auto;padding:0 24px;}
+.btn{display:inline-block;padding:14px 30px;border-radius:40px;font-weight:700;letter-spacing:.5px;cursor:pointer;border:none;font-family:inherit;font-size:1rem;transition:transform .15s ease,box-shadow .15s ease,background .15s ease;}
+.btn-orange{background:var(--orange);color:#fff;}
+.btn-orange:hover{background:var(--orange-dark);transform:translateY(-2px);box-shadow:0 8px 18px rgba(240,169,63,.35);}
+.btn-blue{background:var(--blue);color:#fff;}
+.btn-blue:hover{background:var(--blue-dark);transform:translateY(-2px);box-shadow:0 8px 18px rgba(31,111,235,.35);}
+.btn-teal{background:var(--teal);color:#fff;}
+.btn-teal:hover{background:var(--teal-dark);transform:translateY(-2px);box-shadow:0 8px 18px rgba(26,166,160,.35);}
+.btn-ghost{background:#fff;color:var(--navy);border:1.5px solid var(--line);}
+.btn-ghost:hover{border-color:var(--blue);color:var(--blue-dark);}
+.btn:disabled{opacity:.55;cursor:not-allowed;transform:none;box-shadow:none;}
+
+header{position:sticky;top:0;background:rgba(255,255,255,.97);backdrop-filter:blur(6px);box-shadow:0 1px 8px rgba(0,0,0,.06);z-index:100;}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:12px 24px;max-width:1080px;margin:0 auto;}
+.brand{display:flex;align-items:center;gap:12px;}
+.brand img{height:54px;width:auto;}
+.brand-name{font-weight:800;font-size:1.15rem;}
+.brand-name .ever{color:var(--blue);}
+.brand-name .roll{color:var(--orange);}
+.brand-name .fund{color:var(--orange);}
+nav ul{display:flex;list-style:none;gap:26px;align-items:center;}
+nav ul li a{color:var(--ink);font-weight:600;font-size:.95rem;}
+nav ul li a:hover{color:var(--blue-dark);}
+.nav-grant a{padding:10px 22px;border-radius:40px;background:var(--teal);color:#fff !important;font-weight:800;letter-spacing:.4px;display:inline-block;}
+.nav-grant a:hover{background:var(--teal-dark);}
+.nav-toggle{display:none;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;background:none;border:none;cursor:pointer;padding:8px;margin-left:auto;}
+.nav-toggle span{display:block;width:26px;height:3px;border-radius:3px;background:var(--ink);transition:transform .25s ease,opacity .25s ease;}
+.nav-toggle.open span:nth-child(1){transform:translateY(8px) rotate(45deg);}
+.nav-toggle.open span:nth-child(2){opacity:0;}
+.nav-toggle.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg);}
+@media(max-width:860px){
+  .nav{flex-wrap:nowrap;}
+  .nav-toggle{display:flex;}
+  #primary-nav{position:absolute;top:100%;right:0;left:0;background:rgba(255,255,255,.98);backdrop-filter:blur(6px);box-shadow:0 8px 18px rgba(0,0,0,.08);max-height:0;overflow:hidden;transition:max-height .3s ease;}
+  #primary-nav.open{max-height:520px;}
+  #primary-nav ul{flex-direction:column;align-items:stretch;gap:0;padding:8px 0;}
+  #primary-nav ul li{width:100%;}
+  #primary-nav ul li a{display:block;padding:14px 24px;font-size:1.05rem;}
+  #primary-nav ul li.nav-grant{width:auto;margin:10px 24px;text-align:center;}
+  #primary-nav ul li.nav-grant a{padding:12px 0;}
+}
+
+.app-hero{background:linear-gradient(135deg,#0f2a4a 0%,#174ea6 60%,#1aa6a0 100%);color:#fff;padding:48px 0 40px;text-align:center;}
+.app-hero .kicker{text-transform:uppercase;letter-spacing:2px;font-size:.8rem;font-weight:800;color:#9ee2df;margin-bottom:8px;}
+.app-hero h1{font-size:2.2rem;line-height:1.2;margin-bottom:10px;}
+.app-hero p{color:#dbe9ff;max-width:640px;margin:0 auto;font-size:1.05rem;}
+
+.progress-wrap{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:79px;z-index:90;}
+.progress-inner{max-width:820px;margin:0 auto;padding:14px 24px;}
+.progress-top{display:flex;justify-content:space-between;align-items:center;font-size:.82rem;font-weight:700;color:var(--muted);letter-spacing:.6px;text-transform:uppercase;margin-bottom:8px;}
+.progress-bar{height:8px;background:#e4ebf3;border-radius:8px;overflow:hidden;}
+.progress-fill{height:100%;width:0;background:linear-gradient(90deg,var(--blue),var(--teal));border-radius:8px;transition:width .35s ease;}
+.save-note{font-size:.78rem;color:var(--teal-dark);font-weight:600;text-transform:none;letter-spacing:0;}
+
+main{padding:36px 0 80px;}
+.card{background:#fff;max-width:820px;margin:0 auto;border-radius:16px;padding:40px;box-shadow:0 10px 30px rgba(15,42,74,.08);border-top:6px solid var(--blue);}
+.step{display:none;}
+.step.active{display:block;animation:fade .35s ease;}
+@keyframes fade{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
+.step-label{text-transform:uppercase;letter-spacing:1.6px;font-size:.78rem;font-weight:800;color:var(--teal-dark);margin-bottom:8px;}
+.step h2{font-size:1.75rem;color:var(--navy);line-height:1.25;margin-bottom:10px;}
+.step > p.lede{color:var(--muted);margin-bottom:26px;max-width:620px;}
+.q{margin-bottom:26px;}
+.q > label,.q .q-title{display:block;font-weight:700;color:var(--navy);font-size:1rem;margin-bottom:4px;}
+.req{color:var(--orange-dark);font-weight:800;margin-left:2px;}
+.opt{color:var(--muted);font-weight:500;font-size:.85rem;font-style:italic;margin-left:6px;}
+.help{color:var(--muted);font-size:.88rem;margin-bottom:10px;line-height:1.5;}
+input[type=text],input[type=email],input[type=tel],input[type=date],input[type=number],select,textarea{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:8px;font-family:inherit;font-size:1rem;color:var(--ink);background:#fff;}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(31,111,235,.15);}
+textarea{resize:vertical;min-height:120px;}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;}
+.grid-city{display:grid;grid-template-columns:1.2fr 1fr .8fr;gap:18px;}
+@media(max-width:640px){.grid2,.grid3,.grid-city{grid-template-columns:1fr;}}
+.money{position:relative;}
+.money span.sym{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--muted);font-weight:700;}
+.money input{padding-left:26px;}
+
+.choices{display:grid;gap:10px;}
+.choices.two{grid-template-columns:1fr 1fr;}
+.choices.three{grid-template-columns:1fr 1fr 1fr;}
+@media(max-width:640px){.choices.two,.choices.three{grid-template-columns:1fr;}}
+.choice{display:flex;gap:12px;align-items:flex-start;border:1.5px solid var(--line);border-radius:10px;padding:14px 16px;cursor:pointer;background:#fff;transition:border-color .15s ease,background .15s ease,box-shadow .15s ease;}
+.choice:hover{border-color:var(--blue);background:#f7fafe;}
+.choice input{margin-top:4px;accent-color:var(--blue);width:18px;height:18px;flex:0 0 auto;}
+.choice .ct{font-weight:700;color:var(--navy);font-size:.97rem;display:block;}
+.choice .cs{color:var(--muted);font-size:.85rem;display:block;line-height:1.45;}
+.choice.sel{border-color:var(--blue);background:#eef4fb;box-shadow:0 0 0 3px rgba(31,111,235,.12);}
+
+.err{color:#b3261e;font-size:.85rem;font-weight:600;margin-top:6px;display:none;}
+.q.invalid .err{display:block;}
+.q.invalid input,.q.invalid select,.q.invalid textarea{border-color:#b3261e;}
+.q.invalid .choices .choice{border-color:#e5b4b0;}
+
+.nav-btns{display:flex;justify-content:space-between;gap:14px;margin-top:34px;padding-top:24px;border-top:1px solid #e9eff5;}
+.nav-btns .spacer{flex:1;}
+
+.callout{background:#eef4fb;border-left:5px solid var(--teal);border-radius:10px;padding:20px 22px;margin:22px 0;}
+.callout h3{color:var(--navy);font-size:1.05rem;margin-bottom:8px;}
+.callout ul{margin:0;padding-left:20px;color:var(--muted);}
+.callout li{margin-bottom:7px;}
+.promises{background:#fff8ec;border:1px solid #f3dcb4;border-radius:12px;padding:22px 24px;margin:26px 0;}
+.promises .plabel{text-transform:uppercase;letter-spacing:1.4px;font-size:.72rem;font-weight:800;color:var(--orange-dark);margin-bottom:6px;}
+.promises h3{color:var(--navy);font-size:1.2rem;margin-bottom:12px;}
+.promises p{color:var(--muted);font-size:.92rem;margin-bottom:9px;}
+.promises p b{color:var(--navy);}
+
+.exit-screen{display:none;text-align:left;}
+.exit-screen.show{display:block;}
+.exit-screen h2{color:var(--navy);}
+.total-line{display:flex;justify-content:space-between;align-items:center;background:#eef4fb;border-radius:10px;padding:14px 18px;font-weight:700;color:var(--navy);margin-top:6px;}
+.total-line span.amt{font-size:1.15rem;color:var(--blue-dark);}
+.warnline{color:#b3261e;font-size:.88rem;font-weight:600;margin-top:8px;}
+
+.review-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:.93rem;}
+.review-table th{text-align:left;padding:9px 12px 9px 0;color:var(--muted);font-weight:600;width:44%;vertical-align:top;border-bottom:1px solid #eef2f6;}
+.review-table td{padding:9px 0;color:var(--ink);font-weight:600;border-bottom:1px solid #eef2f6;vertical-align:top;}
+.review-sec{margin-bottom:22px;}
+.review-sec h4{color:var(--teal-dark);text-transform:uppercase;letter-spacing:1.2px;font-size:.75rem;margin-bottom:2px;}
+
+.done{display:none;text-align:center;padding:20px 0;}
+.done.show{display:block;}
+.done .check{font-size:3.2rem;line-height:1;margin-bottom:10px;}
+.done h2{color:var(--teal-dark);font-size:2rem;margin-bottom:12px;}
+.done .refid{display:inline-block;background:#eef4fb;border:1px dashed var(--blue);color:var(--navy);font-weight:800;letter-spacing:1.5px;padding:10px 22px;border-radius:10px;margin:14px 0 20px;font-size:1.1rem;}
+.done p{color:var(--muted);max-width:560px;margin:0 auto 14px;}
+.done .next{background:#fff8ec;border:1px solid #f3dcb4;border-radius:12px;padding:20px;text-align:left;max-width:600px;margin:22px auto 0;}
+.done .next h3{color:var(--navy);font-size:1.05rem;margin-bottom:8px;}
+.done .next ol{padding-left:20px;color:var(--muted);}
+.done .next li{margin-bottom:8px;}
+
+.privacy-note{max-width:820px;margin:26px auto 0;color:var(--muted);font-size:.84rem;line-height:1.6;text-align:center;padding:0 24px;}
+.privacy-note b{color:var(--navy);}
+
+footer{background:var(--navy);color:#cdd6e0;text-align:center;padding:40px 24px;}
+footer .brand-name{justify-content:center;margin-bottom:10px;}
+footer a{color:var(--orange);}
+.footer-tag{color:#9ec5ff;font-style:italic;margin-top:6px;}
+.footer-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 26px;list-style:none;margin:22px 0 4px;padding:0;}
+.footer-nav li a{color:#cdd6e0;font-weight:600;font-size:.95rem;}
+.footer-nav li a:hover{color:var(--orange);}
+@media(max-width:640px){
+  .progress-top{font-size:.72rem;}
+  .save-note{font-size:.7rem;text-align:right;}
+  .progress-inner{padding:10px 20px;}
+  .card{padding:26px 20px;border-radius:12px;}
+  .app-hero h1{font-size:1.7rem;}
+  .step h2{font-size:1.4rem;}
+  .progress-wrap{top:79px;}
+  .nav-btns{flex-direction:column-reverse;}
+  .nav-btns .btn{width:100%;}
+  .nav-btns .spacer{display:none;}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important;}}
+</style>
+</head>
+<body>
+<header>
+<div class="nav">
+<a class="brand" href="/" aria-label="Ever Roll Fund home">
+<img src="logo.png" alt="Ever Roll Fund logo">
+<span class="brand-name"><span class="ever">EVER</span> <span class="roll">ROLL</span> <span class="fund">FUND</span></span>
+</a>
+<button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+<nav id="primary-nav">
+<ul>
+<li><a href="/#mission">Mission</a></li>
+<li><a href="/#problem">The Problem</a></li>
+<li><a href="/#about">Our Story</a></li>
+<li><a href="/#contact">Contact</a></li>
+<li class="nav-grant"><a href="/apply.html" aria-current="page">Grant Form</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<section class="app-hero">
+<div class="container">
+<div class="kicker">Mobility, made affordable.</div>
+<h1>Equipment Grant Application</h1>
+<p>The hospital saves your life. The right equipment gives it back - and it is the part almost nobody covers. This application is how we help you close that gap.</p>
+</div>
+</section>
+
+<div class="progress-wrap" id="progress-wrap">
+<div class="progress-inner">
+<div class="progress-top">
+<span id="progress-label">Before you start</span>
+<span class="save-note" id="save-note">Your answers save in this browser</span>
+</div>
+<div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+</div>
+</div>
+
+<main>
+<form id="grant-form" class="card" novalidate>
+
+<!-- ============ STEP 0: INTRO ============ -->
+<section class="step active" data-step="0">
+  <div class="step-label">Before you start</div>
+  <h2>A few things to have nearby</h2>
+  <p class="lede">You do not need to send us tax returns, pay stubs, or bank statements. Tell us what you need, what insurance did, and what your situation is. We take you at your word.</p>
+  <div class="callout">
+    <h3>Most people finish this in about 20 minutes.</h3>
+    <ul>
+      <li>A quote or invoice for the equipment, from the supplier or ATP who would provide it.</li>
+      <li>Your insurance decision - a denial letter, an explanation of benefits, or just what they told you.</li>
+      <li>The date of your injury and, if you know it, your level of injury.</li>
+      <li>Your supplier's contact information. If you are approved, we pay them directly, so we will need to reach them.</li>
+    </ul>
+  </div>
+  <p class="help">Your answers save automatically in this browser. You can close this page, rest, and come back to finish. Nothing is sent to us until you press Submit at the end.</p>
+  <div class="nav-btns"><div class="spacer"></div><button type="button" class="btn btn-blue" data-next>Start the application</button></div>
+</section>
+
+<!-- ============ STEP 1: ELIGIBILITY ============ -->
+<section class="step" data-step="1">
+  <div class="step-label">Step 1 of 8</div>
+  <h2>Are we the right fund for you?</h2>
+  <p class="lede">Four quick questions. If any answer is "no," we will tell you right away rather than let you fill out a long form for nothing - and we will point you somewhere that may fit better.</p>
+
+  <div class="q" data-required data-name="Spinal cord injury">
+    <span class="q-title">Do you have a spinal cord injury?<span class="req">*</span></span>
+    <p class="help">Traumatic or non-traumatic, at any level, complete or incomplete.</p>
+    <div class="choices two">
+      <label class="choice"><input type="radio" name="elig_sci" value="Yes"><span><span class="ct">Yes</span></span></label>
+      <label class="choice"><input type="radio" name="elig_sci" value="No"><span><span class="ct">No</span></span></label>
+    </div>
+    <div class="err">Please choose one.</div>
+  </div>
+
+  <div class="q" data-required data-name="US resident">
+    <span class="q-title">Do you live in the United States?<span class="req">*</span></span>
+    <p class="help">We fund people in all fifty states, D.C., and U.S. territories.</p>
+    <div class="choices two">
+      <label class="choice"><input type="radio" name="elig_us" value="Yes"><span><span class="ct">Yes</span></span></label>
+      <label class="choice"><input type="radio" name="elig_us" value="No"><span><span class="ct">No</span></span></label>
+    </div>
+    <div class="err">Please choose one.</div>
+  </div>
+
+  <div class="q" data-required data-name="Insurance status">
+    <span class="q-title">Have you already been through insurance for this equipment?<span class="req">*</span></span>
+    <p class="help">Meaning your insurer denied it, covered only part of it, or told you it is not a covered item.</p>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="elig_ins" value="Yes - it was denied"><span><span class="ct">Yes - it was denied</span><span class="cs">Insurance said no.</span></span></label>
+      <label class="choice"><input type="radio" name="elig_ins" value="Yes - they covered part of it"><span><span class="ct">Yes - they covered part of it</span><span class="cs">There is a gap left over that I have to pay.</span></span></label>
+      <label class="choice"><input type="radio" name="elig_ins" value="Yes - they said it is not a covered item"><span><span class="ct">Yes - they said it is not a covered item</span><span class="cs">Common for cushions, sports equipment, and power-assist wheels.</span></span></label>
+      <label class="choice"><input type="radio" name="elig_ins" value="I have no insurance"><span><span class="ct">I have no insurance</span><span class="cs">Nothing to submit to.</span></span></label>
+      <label class="choice"><input type="radio" name="elig_ins" value="Not yet - it is still pending"><span><span class="ct">Not yet - it is still pending</span><span class="cs">I have submitted it and I am waiting.</span></span></label>
+      <label class="choice"><input type="radio" name="elig_ins" value="No - I have not submitted it"><span><span class="ct">No - I have not submitted it</span><span class="cs">I have not gone to insurance yet.</span></span></label>
+    </div>
+    <div class="err">Please choose one.</div>
+  </div>
+
+  <div class="q" data-required data-name="Specific item">
+    <span class="q-title">Is there a specific piece of equipment you are asking us to help pay for?<span class="req">*</span></span>
+    <p class="help">We fund named items with a price on them, not general expenses.</p>
+    <div class="choices two">
+      <label class="choice"><input type="radio" name="elig_item" value="Yes"><span><span class="ct">Yes</span></span></label>
+      <label class="choice"><input type="radio" name="elig_item" value="Not yet"><span><span class="ct">Not yet</span></span></label>
+    </div>
+    <div class="err">Please choose one.</div>
+  </div>
+
+  <div class="nav-btns"><button type="button" class="btn btn-ghost" data-back>Back</button><div class="spacer"></div><button type="button" class="btn btn-blue" data-next>Continue</button></div>
+</section>
+
+<!-- ============ STEP 2: WHO IS FILLING THIS OUT ============ -->
+<section class="step" data-step="2">
+  <div class="step-label">Step 2 of 8</div>
+  <h2>Who is filling this out?</h2>
+  <p class="lede">Anyone can start an application on someone's behalf. The person with the injury still has to sign it at the end.</p>
+  <div class="q" data-required data-name="Who is applying">
+    <div class="choices">
+      <label class="choice"><input type="radio" name="filer_role" value="Person with the spinal cord injury"><span><span class="ct">I am the person with the spinal cord injury</span><span class="cs">I am applying for myself.</span></span></label>
+      <label class="choice"><input type="radio" name="filer_role" value="Family member, caregiver, or friend"><span><span class="ct">I am a family member, caregiver, or friend</span><span class="cs">I am helping someone apply.</span></span></label>
+      <label class="choice"><input type="radio" name="filer_role" value="Clinician (PT, OT, physician, case manager, ATP)"><span><span class="ct">I am a clinician - PT, OT, physician, case manager, ATP</span><span class="cs">I am submitting for a patient or client.</span></span></label>
+      <label class="choice"><input type="radio" name="filer_role" value="Equipment supplier or DME provider"><span><span class="ct">I work for an equipment supplier or DME provider</span><span class="cs">I am submitting for a customer.</span></span></label>
+    </div>
+    <div class="err">Please choose one.</div>
+  </div>
+  <div id="filer-details" style="display:none">
+    <div class="grid2">
+      <div class="q" data-name="Your name (person filing)"><label for="filer_name">Your name<span class="req">*</span></label><input type="text" id="filer_name" name="filer_name" autocomplete="name"><div class="err">Required.</div></div>
+      <div class="q" data-name="Your email (person filing)"><label for="filer_email">Your email<span class="req">*</span></label><input type="email" id="filer_email" name="filer_email" autocomplete="email"><div class="err">Enter a valid email.</div></div>
+    </div>
+    <div class="grid2">
+      <div class="q" data-name="Your phone (person filing)"><label for="filer_phone">Your phone<span class="req">*</span></label><input type="tel" id="filer_phone" name="filer_phone" placeholder="(305) 555-0123" autocomplete="tel"><div class="err">Required.</div></div>
+      <div class="q" data-name="Your relationship or organization"><label for="filer_org">Your relationship or organization<span class="opt">optional</span></label><input type="text" id="filer_org" name="filer_org" placeholder="e.g. daughter, Mercy Rehab, Apex Medical"><div class="err"></div></div>
+    </div>
+  </div>
+  <div class="nav-btns"><button type="button" class="btn btn-ghost" data-back>Back</button><div class="spacer"></div><button type="button" class="btn btn-blue" data-next>Continue</button></div>
+</section>
+
+<!-- ============ STEP 3: ABOUT THE PERSON ============ -->
+<section class="step" data-step="3">
+  <div class="step-label">Step 3 of 8</div>
+  <h2>About the person who needs the equipment</h2>
+  <p class="lede">If you are applying for yourself, this is you.</p>
+  <div class="grid2">
+    <div class="q" data-name="First name"><label for="first_name">First name<span class="req">*</span></label><input type="text" id="first_name" name="first_name" autocomplete="given-name"><div class="err">Required.</div></div>
+    <div class="q" data-name="Last name"><label for="last_name">Last name<span class="req">*</span></label><input type="text" id="last_name" name="last_name" autocomplete="family-name"><div class="err">Required.</div></div>
+  </div>
+  <div class="grid2">
+    <div class="q" data-name="Email"><label for="email">Email<span class="req">*</span></label><p class="help">This is how we will send our decision.</p><input type="email" id="email" name="email" autocomplete="email"><div class="err">Enter a valid email.</div></div>
+    <div class="q" data-name="Phone"><label for="phone">Phone<span class="req">*</span></label><p class="help">We call if something on the application is unclear.</p><input type="tel" id="phone" name="phone" placeholder="(305) 555-0123" autocomplete="tel"><div class="err">Required.</div></div>
+  </div>
+  <div class="q" data-name="Street address"><label for="street">Street address<span class="req">*</span></label><input type="text" id="street" name="street" autocomplete="street-address"><div class="err">Required.</div></div>
+  <div class="grid-city">
+    <div class="q" data-name="City"><label for="city">City<span class="req">*</span></label><input type="text" id="city" name="city" autocomplete="address-level2"><div class="err">Required.</div></div>
+    <div class="q" data-name="State"><label for="state">State<span class="req">*</span></label><select id="state" name="state" autocomplete="address-level1"><option value="">Choose...</option></select><div class="err">Required.</div></div>
+    <div class="q" data-name="ZIP"><label for="zip">ZIP<span class="req">*</span></label><input type="text" id="zip" name="zip" inputmode="numeric" autocomplete="postal-code"><div class="err">Enter a valid ZIP.</div></div>
+  </div>
+  <div class="grid2">
+    <div class="q" data-name="Date of birth"><label for="dob">Date of birth<span class="req">*</span></label><p class="help">Applicants under 18 must have a parent or guardian sign.</p><input type="date" id="dob" name="dob"><div class="err">Required.</div></div>
+    <div class="q" data-name="Pronouns"><label for="pronouns">Pronouns<span class="opt">optional</span></label><p class="help">So we address you correctly.</p><input type="text" id="pronouns" name="pronouns" placeholder="she/her, he/him, they/them"><div class="err"></div></div>
+  </div>
+  <div class="nav-btns"><button type="button" class="btn btn-ghost" data-back>Back</button><div class="spacer"></div><button type="button" class="btn btn-blue" data-next>Continue</button></div>
+</section>
+
+<!-- ============ STEP 4: YOUR INJURY ============ -->
+<section class="step" data-step="4">
+  <div class="step-label">Step 4 of 8</div>
+  <h2>Your injury</h2>
+  <p class="lede">Enough for us to understand your situation. Answer what you know - nobody expects you to have your chart memorized.</p>
+  <div class="grid2">
+    <div class="q" data-name="Date of injury"><label for="injury_date">Date of injury<span class="req">*</span></label><p class="help">An approximate date is fine.</p><input type="date" id="injury_date" name="injury_date"><div class="err">Required.</div></div>
+    <div class="q" data-name="Level of injury"><label for="injury_level">Level of injury<span class="opt">if you know it</span></label><input type="text" id="injury_level" name="injury_level" placeholder="e.g. T5, C6-7, L1"><div class="err"></div></div>
+  </div>
+  <div class="grid2">
+    <div class="q" data-name="Complete or incomplete"><label for="injury_completeness">Complete or incomplete?<span class="opt">optional</span></label><select id="injury_completeness" name="injury_completeness"><option value="">Choose...</option><option>Complete</option><option>Incomplete</option><option>I am not sure</option></select><div class="err"></div></div>
+    <div class="q" data-name="Rehab location"><label for="rehab">Where did you do rehab?<span class="opt">optional</span></label><input type="text" id="rehab" name="rehab" placeholder="Hospital or rehab center"><div class="err"></div></div>
+  </div>
+  <div class="q" data-required data-name="Working with a therapist or ATP">
+    <span class="q-title">Are you currently working with a therapist, ATP, or seating clinic?<span class="req">*</span></span>
+    <p class="help">Not required to qualify. It helps us understand whether the item has been professionally fitted to you.</p>
+    <div class="choices three">
+      <label class="choice"><input type="radio" name="working_with_clinician" value="Yes"><span><span class="ct">Yes</span></span></label>
+      <label class="choice"><input type="radio" name="working_with_clinician" value="No"><span><span class="ct">No</span></span></label>
+      <label class="choice"><input type="radio" name="working_with_clinician" value="Between providers"><span><span class="ct">Between providers</span></span></label>
+    </div>
+    <div class="err">Please choose one.</div>
+  </div>
+  <div class="q" id="clinician-name-wrap" style="display:none" data-name="Clinician or clinic name"><label for="clinician_name">Who are you working with?<span class="opt">optional</span></label><p class="help">Name and clinic, if you are comfortable sharing it. We may contact them to verify the fit.</p><input type="text" id="clinician_name" name="clinician_name"><div class="err"></div></div>
+  <div class="nav-btns"><button type="button" class="btn btn-ghost" data-back>Back</button><div class="spacer"></div><button type="button" class="btn btn-blue" data-next>Continue</button></div>
+</section>
+
+<!-- ============ STEP 5: THE EQUIPMENT ============ -->
+<section class="step" data-step="5">
+  <div class="step-label">Step 5 of 8</div>
+  <h2>The equipment you need</h2>
+  <p class="lede">This is the heart of the application. Be specific - the more precisely you can name the item, the faster we can act on it.</p>
+  <div class="q" data-name="Item"><label for="item_name">What is the item?<span class="req">*</span></label><p class="help">Make and model if you have it. "ROHO Quadtro Select cushion, 18x18" tells us more than "a cushion."</p><input type="text" id="item_name" name="item_name"><div class="err">Required.</div></div>
+  <div class="q" data-name="Equipment category"><label for="item_category">What kind of equipment is it?<span class="req">*</span></label><select id="item_category" name="item_category">
+    <option value="">Choose...</option>
+    <option>Manual wheelchair or frame</option>
+    <option>Power wheelchair or scooter</option>
+    <option>Power-assist wheels or add-on drive</option>
+    <option>Cushion, back, or seating system</option>
+    <option>Standing frame or gait equipment</option>
+    <option>Transfer equipment (lift, board, sling)</option>
+    <option>Bathroom equipment (shower or commode chair)</option>
+    <option>Bed, mattress, or pressure-relief surface</option>
+    <option>Adaptive sports or exercise equipment</option>
+    <option>Vehicle modification, ramp, or hand controls</option>
+    <option>Home accessibility modification</option>
+    <option>Communication or computer access technology</option>
+    <option>Repair or replacement parts for equipment I own</option>
+    <option>Other</option>
+  </select><div class="err">Required.</div></div>
+  <div class="q" data-name="What it would let you do"><label for="item_impact">What would this equipment let you do that you cannot do now?<span class="req">*</span></label><p class="help">In your own words. This is the single most important answer on the form. For example: I cannot get up the ramp at my son's school without help. Power-assist wheels would mean I could take him myself.</p><textarea id="item_impact" name="item_impact"></textarea><div class="err">Please tell us in a sentence or two.</div></div>
+  <div class="grid2">
+    <div class="q" data-name="Total cost"><label for="cost_total">Total cost of the item<span class="req">*</span></label><p class="help">From the quote.</p><div class="money"><span class="sym">$</span><input type="number" id="cost_total" name="cost_total" min="0" step="1" inputmode="decimal"></div><div class="err">Required.</div></div>
+    <div class="q" data-name="Insurance will cover"><label for="cost_insurance">Amount insurance will cover<span class="req">*</span></label><p class="help">Enter 0 if none.</p><div class="money"><span class="sym">$</span><input type="number" id="cost_insurance" name="cost_insurance" min="0" step="1" inputmode="decimal"></div><div class="err">Required.</div></div>
+  </div>
+  <div class="grid2">
+    <div class="q" data-name="Other funding secured"><label for="cost_other">Other funding you have secured<span class="req">*</span></label><p class="help">Other grants, fundraiser, family. Enter 0 if none.</p><div class="money"><span class="sym">$</span><input type="number" id="cost_other" name="cost_other" min="0" step="1" inputmode="decimal"></div><div class="err">Required.</div></div>
+    <div class="q" data-name="Amount requested"><label for="cost_request">Amount you are asking Ever Roll Fund for<span class="req">*</span></label><p class="help">Our maximum grant is $5,000. You may ask for less than the full gap if you have another source lined up.</p><div class="money"><span class="sym">$</span><input type="number" id="cost_request" name="cost_request" min="0" max="5000" step="1" inputmode="decimal"></div><div class="err">Enter an amount up to $5,000.</div></div>
+  </div>
+  <div class="total-line"><span>Remaining gap after insurance and other funding</span><span class="amt" id="gap-amt">$0</span></div>
+  <div class="warnline" id="gap-warn" style="display:none"></div>
+  <div class="q" style="margin-top:26px" data-name="When needed"><label for="need_by">When do you need it?<span class="req">*</span></label><select id="need_by" name="need_by">
+    <option value="">Choose...</option>
+    <option>As soon as possible - it is urgent</option>
+    <option>Within 30 days</option>
+    <option>Within 60 to 90 days</option>
+    <option>No firm deadline, but sooner is better</option>
+    <option>My quote expires on a specific date (noted below)</option>
+  </select><div class="err">Required.</div></div>
+  <div class="q" data-required data-name="Partial funding acceptable">
+    <span class="q-title">If we could only fund part of this, would it still help?<span class="req">*</span></span>
+    <p class="help">An honest answer here helps us stretch the fund across more people. It will not count against you.</p>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="partial_ok" value="Yes - partial funding would still get me there"><span><span class="ct">Yes - partial funding would still get me there</span><span class="cs">I can close the rest another way.</span></span></label>
+      <label class="choice"><input type="radio" name="partial_ok" value="No - it is all or nothing"><span><span class="ct">No - it is all or nothing</span><span class="cs">Without the full amount I cannot buy it.</span></span></label>
+    </div>
+    <div class="err">Please choose one.</div>
+  </div>
+  <div class="nav-btns"><button type="button" class="btn btn-ghost" data-back>Back</button><div class="spacer"></div><button type="button" class="btn btn-blue" data-next>Continue</button></div>
+</section>
+
+<!-- ============ STEP 6: SUPPLIER AND INSURANCE ============ -->
+<section class="step" data-step="6">
+  <div class="step-label">Step 6 of 8</div>
+  <h2>Your supplier and your insurance</h2>
+  <p class="lede">If you are approved, we pay your supplier directly against their invoice. We do not send money to individuals - that is how we keep every dollar traceable to a real piece of equipment for a real person. It also means we need to be able to reach whoever is providing your item.</p>
+  <div class="grid2">
+    <div class="q" data-name="Supplier name"><label for="supplier_name">Supplier or provider name<span class="req">*</span></label><p class="help">The DME company, clinic, or retailer who would fill the order.</p><input type="text" id="supplier_name" name="supplier_name"><div class="err">Required.</div></div>
+    <div class="q" data-name="Supplier contact person"><label for="supplier_contact">Contact person there<span class="opt">if you know</span></label><p class="help">e.g. your ATP or rep</p><input type="text" id="supplier_contact" name="supplier_contact"><div class="err"></div></div>
+  </div>
+  <div class="grid2">
+    <div class="q" data-name="Supplier email"><label for="supplier_email">Supplier email<span class="req">*</span></label><input type="email" id="supplier_email" name="supplier_email"><div class="err">Enter a valid email.</div></div>
+    <div class="q" data-name="Supplier phone"><label for="supplier_phone">Supplier phone<span class="req">*</span></label><input type="tel" id="supplier_phone" name="supplier_phone"><div class="err">Required.</div></div>
+  </div>
+  <div class="grid2">
+    <div class="q" data-name="Quote number"><label for="quote_number">Quote or invoice number<span class="opt">if you have one</span></label><input type="text" id="quote_number" name="quote_number"><div class="err"></div></div>
+    <div class="q" data-name="Quote date"><label for="quote_date">Date of the quote<span class="opt">optional</span></label><input type="date" id="quote_date" name="quote_date"><div class="err"></div></div>
+  </div>
+  <div class="q" data-required data-name="How supplier was chosen">
+    <span class="q-title">Did you choose this supplier yourself?<span class="req">*</span></span>
+    <p class="help">We ask because it matters to us that nobody is steering you. Ever Roll Fund never tells you where to shop or what brand to buy, and we do not accept anything of value from suppliers or manufacturers in exchange for referrals.</p>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="supplier_choice" value="Yes - I chose them"><span><span class="ct">Yes - I chose them</span><span class="cs">On my own or on a recommendation I sought out.</span></span></label>
+      <label class="choice"><input type="radio" name="supplier_choice" value="My clinic or therapist works with them"><span><span class="ct">My clinic or therapist works with them</span><span class="cs">Standard for most seating and mobility.</span></span></label>
+      <label class="choice"><input type="radio" name="supplier_choice" value="They are the only option that takes my insurance"><span><span class="ct">They are the only option that takes my insurance</span></span></label>
+      <label class="choice"><input type="radio" name="supplier_choice" value="Something else"><span><span class="ct">Something else</span></span></label>
+    </div>
+    <div class="err">Please choose one.</div>
+  </div>
+  <div class="q" data-name="Primary insurance"><label for="insurance_name">Your primary insurance<span class="req">*</span></label><p class="help">Write "none" if you are uninsured. e.g. Medicare, Aetna, state Medicaid</p><input type="text" id="insurance_name" name="insurance_name"><div class="err">Required.</div></div>
+  <div class="q" data-name="What insurance said"><label for="insurance_reason">What did insurance say?<span class="req">*</span></label><p class="help">Their reason, as best you understood it. "Not medically necessary," "capped benefit," "once every five years" - whatever they told you. If you have a denial letter, you can email it to us after you submit.</p><textarea id="insurance_reason" name="insurance_reason"></textarea><div class="err">Required.</div></div>
+  <div class="q" data-name="Applied to other funds"><span class="q-title">Have you applied to other funds for this item?<span class="opt">optional</span></span><p class="help">Applying elsewhere does not hurt your chances here. It helps us avoid double-funding the same gap.</p>
+    <div class="choices two">
+      <label class="choice"><input type="radio" name="other_funds" value="Yes"><span><span class="ct">Yes</span></span></label>
+      <label class="choice"><input type="radio" name="other_funds" value="No"><span><span class="ct">No</span></span></label>
+    </div>
+    <div class="err"></div>
+  </div>
+  <div class="q" id="other-funds-detail" style="display:none" data-name="Which other funds"><label for="other_funds_detail">Which ones, and what happened</label><textarea id="other_funds_detail" name="other_funds_detail" style="min-height:90px"></textarea><div class="err"></div></div>
+  <div class="nav-btns"><button type="button" class="btn btn-ghost" data-back>Back</button><div class="spacer"></div><button type="button" class="btn btn-blue" data-next>Continue</button></div>
+</section>
+
+<!-- ============ STEP 7: YOUR SITUATION ============ -->
+<section class="step" data-step="7">
+  <div class="step-label">Step 7 of 8</div>
+  <h2>Your situation</h2>
+  <p class="lede">We do not ask for tax returns, pay stubs, or bank statements. We ask you to tell us the truth about where you are financially, and we take you at your word. What you write here stays between you and our review committee.</p>
+  <div class="q" data-name="Why out of pocket is not possible"><label for="hardship">Why is paying for this out of pocket not possible right now?<span class="req">*</span></label><p class="help">A few sentences is plenty. Lost income, medical debt, a household living on one salary instead of two, savings already spent on the first round of equipment - whatever is true for you.</p><textarea id="hardship" name="hardship"></textarea><div class="err">Required.</div></div>
+  <div class="grid2">
+    <div class="q" data-name="Household size"><label for="household_size">How many people live in your household?<span class="req">*</span></label><select id="household_size" name="household_size"><option value="">Choose...</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8 or more</option></select><div class="err">Required.</div></div>
+    <div class="q" data-name="Work situation"><label for="work_situation">Your work situation<span class="req">*</span></label><select id="work_situation" name="work_situation">
+      <option value="">Choose...</option>
+      <option>Working full time</option>
+      <option>Working part time</option>
+      <option>Self-employed</option>
+      <option>Not working because of my injury</option>
+      <option>Not working for another reason</option>
+      <option>On disability benefits (SSDI or SSI)</option>
+      <option>Retired</option>
+      <option>Student</option>
+      <option>Prefer not to say</option>
+    </select><div class="err">Required.</div></div>
+  </div>
+  <div class="q" data-name="Household income"><label for="household_income">Roughly, what is your household's income?<span class="opt">optional</span></label><p class="help">You may skip this. We ask only because it helps us direct the fund toward the people furthest from being able to self-pay. Skipping it will not disqualify you.</p><select id="household_income" name="household_income">
+    <option value="">Choose...</option>
+    <option>Under $25,000</option>
+    <option>$25,000 - $50,000</option>
+    <option>$50,000 - $80,000</option>
+    <option>$80,000 - $120,000</option>
+    <option>Over $120,000</option>
+    <option>Prefer not to say</option>
+  </select><div class="err"></div></div>
+  <div class="q" data-required data-name="Insider relationship">
+    <span class="q-title">Are you, or is anyone in your household, an officer, director, employee, or immediate family member of Ever Roll Fund, Inc. or NeuroBridge Solutions, Inc.?<span class="req">*</span></span>
+    <p class="help">Answering yes does not disqualify you. It means anyone connected to you steps out of the room while your application is decided. We are a small organization and we would rather say this out loud than have it discovered later.</p>
+    <div class="choices two">
+      <label class="choice"><input type="radio" name="insider" value="No"><span><span class="ct">No</span></span></label>
+      <label class="choice"><input type="radio" name="insider" value="Yes"><span><span class="ct">Yes</span></span></label>
+    </div>
+    <div class="err">Please choose one.</div>
+  </div>
+  <div class="q" id="insider-detail" style="display:none" data-name="Insider relationship detail"><label for="insider_detail">Who, and what is the relationship?</label><input type="text" id="insider_detail" name="insider_detail"><div class="err"></div></div>
+
+  <div class="promises">
+    <div class="plabel">What you can hold us to</div>
+    <h3>Our promises to you</h3>
+    <p><b>We sell nothing.</b> Ever Roll Fund does not sell equipment, does not take a commission, and is not paid by any manufacturer or supplier for sending you their way.</p>
+    <p><b>You pick the equipment and the supplier.</b> We will never make an award conditional on choosing a particular brand, model, or vendor.</p>
+    <p><b>Your story is yours.</b> Sharing it is optional and has no effect on whether you are funded. You can say no and still be approved.</p>
+    <p><b>We answer everyone.</b> Approved or not, you will get a real reply from a person - not silence.</p>
+  </div>
+  <div class="nav-btns"><button type="button" class="btn btn-ghost" data-back>Back</button><div class="spacer"></div><button type="button" class="btn btn-blue" data-next>Continue</button></div>
+</section>
+
+<!-- ============ STEP 8: PERMISSIONS AND SIGNATURE ============ -->
+<section class="step" data-step="8">
+  <div class="step-label">Step 8 of 8</div>
+  <h2>Permissions and signature</h2>
+  <div class="q" data-name="Story permissions">
+    <span class="q-title">May we share your story?<span class="opt">completely optional</span></span>
+    <p class="help">Donors give because of real people. If you are willing to be one of them, it helps enormously - but this is a genuine choice, and your answer is not visible to the people deciding your application.</p>
+    <div class="choices">
+      <label class="choice"><input type="checkbox" name="perm_story" value="May share first name and story"><span><span class="ct">You may share my first name and my story</span><span class="cs">In donor updates, our website, and social media.</span></span></label>
+      <label class="choice"><input type="checkbox" name="perm_photo" value="May use an approved photo"><span><span class="ct">You may use a photo of me</span><span class="cs">Only one I send you and approve first.</span></span></label>
+      <label class="choice"><input type="checkbox" name="perm_contact" value="May contact about speaking or sharing"><span><span class="ct">You may contact me later about speaking or sharing</span><span class="cs">You can always say no at the time.</span></span></label>
+      <label class="choice"><input type="checkbox" name="perm_private" id="perm_private" value="Keep application entirely private"><span><span class="ct">Please keep my application entirely private</span><span class="cs">This will not affect our decision in any way.</span></span></label>
+    </div>
+    <div class="err"></div>
+  </div>
+
+  <div class="q" data-name="Attestations">
+    <span class="q-title">Please confirm each of these<span class="req">*</span></span>
+    <div class="choices" style="margin-top:10px">
+      <label class="choice"><input type="checkbox" class="attest" name="attest_true" value="yes"><span><span class="ct">Everything I have written here is true to the best of my knowledge.</span><span class="cs">Including what I said about my financial situation.</span></span></label>
+      <label class="choice"><input type="checkbox" class="attest" name="attest_direct_pay" value="yes"><span><span class="ct">I understand that if I am approved, Ever Roll Fund pays my supplier directly.</span><span class="cs">Funds are not sent to me, and are not transferable to another purpose.</span></span></label>
+      <label class="choice"><input type="checkbox" class="attest" name="attest_no_resale" value="yes"><span><span class="ct">I will use the equipment myself and will not resell it.</span><span class="cs">If my plans change, I will tell Ever Roll Fund.</span></span></label>
+      <label class="choice"><input type="checkbox" class="attest" name="attest_verify" value="yes"><span><span class="ct">Ever Roll Fund may contact my supplier, and my clinician if I named one, to verify this request.</span></span></label>
+      <label class="choice"><input type="checkbox" class="attest" name="attest_privacy" value="yes"><span><span class="ct">I have read how my information will be used.</span><span class="cs">See the privacy note at the bottom of this page.</span></span></label>
+    </div>
+    <div class="err">Please confirm all five.</div>
+  </div>
+
+  <div class="grid2">
+    <div class="q" data-name="Signature"><label for="signature">Type your full name as your signature<span class="req">*</span></label><p class="help">If you are applying for someone else, the person with the injury signs here. For an applicant under 18, a parent or guardian signs.</p><input type="text" id="signature" name="signature" autocomplete="off"><div class="err">Required.</div></div>
+    <div class="q" data-name="Date signed"><label for="signed_date">Date<span class="req">*</span></label><p class="help">Today's date.</p><input type="date" id="signed_date" name="signed_date"><div class="err">Required.</div></div>
+  </div>
+
+  <p class="help" style="margin-bottom:18px">You will see a confirmation on screen and get an email within a few minutes. If you do not, write to <a href="mailto:inquiry@everrollfund.org">inquiry@everrollfund.org</a> - do not assume it went through.</p>
+  <div class="err" id="submit-error" style="font-size:.95rem"></div>
+  <div class="nav-btns"><button type="button" class="btn btn-ghost" data-back>Back</button><div class="spacer"></div><button type="submit" class="btn btn-teal" id="submit-btn">Submit my application</button></div>
+</section>
+
+<!-- ============ NOT ELIGIBLE ============ -->
+<section class="exit-screen" id="exit-screen">
+  <div class="step-label">Before you go further</div>
+  <h2>We are probably not the right fund for this</h2>
+  <p class="lede" id="exit-reason"></p>
+  <div class="callout">
+    <h3>Where to look instead</h3>
+    <ul>
+      <li><b>Not a spinal cord injury:</b> your diagnosis-specific foundation is usually the fastest route, and many state assistive technology programs fund equipment regardless of diagnosis.</li>
+      <li><b>Outside the United States:</b> we are only able to fund U.S. residents right now.</li>
+      <li><b>Insurance not yet submitted:</b> file with your insurer first, even if you expect a denial. The denial is what unlocks most equipment grants, including ours. Come back to us with their answer.</li>
+      <li><b>No specific item yet:</b> get a written quote from a supplier or ATP for a named item, then start again. We fund named items with a price on them.</li>
+    </ul>
+  </div>
+  <p class="help">If you think we have this wrong, write to <a href="mailto:inquiry@everrollfund.org">inquiry@everrollfund.org</a> and tell us. A person will read it.</p>
+  <div class="nav-btns"><button type="button" class="btn btn-ghost" id="exit-back">Go back and change my answers</button><div class="spacer"></div><a class="btn btn-blue" href="/#contact">Contact us instead</a></div>
+</section>
+
+<!-- ============ CONFIRMATION ============ -->
+<section class="done" id="done-screen">
+  <div class="check">&#10003;</div>
+  <h2>Your application is in.</h2>
+  <p>We have it. Nothing else is required from you today.</p>
+  <div class="refid" id="ref-id">ERF-0000-0000</div>
+  <p>Write that reference number down. A confirmation email is on its way to <b id="done-email">your inbox</b>.</p>
+  <div class="next">
+    <h3>Two things that will speed us up</h3>
+    <ol>
+      <li>Email your <b>quote or invoice</b> and your <b>insurance decision</b> (denial letter or explanation of benefits) to <a href="mailto:inquiry@everrollfund.org">inquiry@everrollfund.org</a>, with your reference number in the subject line.</li>
+      <li>Let your supplier know we may contact them to confirm the item and the price.</li>
+    </ol>
+  </div>
+  <p style="margin-top:22px">Most applicants hear back within 30 days. If we say no, we will tell you why, and point you toward other funds where we can.</p>
+  <div style="margin-top:26px"><a class="btn btn-blue" href="/">Back to Ever Roll Fund</a></div>
+</section>
+
+</form>
+
+<section class="card" id="how-we-review" style="margin-top:28px;border-top-color:var(--teal)">
+  <div class="step-label">How we review applications</div>
+  <h2 style="font-size:1.5rem;color:var(--navy);margin-bottom:10px">There is no hidden scoring</h2>
+  <p class="help" style="margin-bottom:20px">We publish this so you know exactly what happens to your application and what we are weighing.</p>
+  <div class="callout" style="border-left-color:var(--blue)">
+    <ul style="list-style:none;padding-left:0">
+      <li><b>1. We confirm you are eligible.</b> Spinal cord injury, U.S. resident, a named item with a price, and insurance has already been through. Usually within three business days.</li>
+      <li><b>2. We verify the quote with your supplier.</b> We contact them to confirm the item, the price, and that they will accept payment from us directly.</li>
+      <li><b>3. The review committee reads your application.</b> We weigh how much the equipment changes your daily independence, how urgent the need is, how far the gap is from what you can cover, and whether other funding is available to you. We give particular weight to people in their first year after injury, when equipment needs peak and people are least able to fight for funding - but we fund people at every stage.</li>
+      <li><b>4. We decide, and we tell you either way.</b> Most applicants hear back within 30 days. If we say no, we will tell you why, and point you toward other funds where we can.</li>
+      <li><b>5. We pay your supplier.</b> Directly, against their invoice, with a copy to you. You take delivery from them as you normally would.</li>
+      <li><b>6. We check in once, later.</b> A few months on, we will ask how the equipment is working out. Answering is optional. It is how we learn whether we are doing this well.</li>
+    </ul>
+  </div>
+</section>
+
+<p class="privacy-note">
+<b>What we do with what you tell us.</b> Your application is read by the Ever Roll Fund review committee and no one else. We share your name, the item, and the quote with your supplier in order to pay them. We do not sell, rent, or trade your information, and we do not share it with equipment manufacturers. Health information you give us here is not covered by HIPAA, because we are a grant fund and not a healthcare provider or insurer - we protect it because it is yours, not because a statute requires it. Full details in our <a href="Ever%20Roll%20Fund%20-%20Privacy%20Policy.pdf">Privacy Policy</a> and <a href="Ever%20Roll%20Fund%20-%20Terms%20of%20Service.pdf">Terms of Service</a>.
+</p>
+<p class="privacy-note" style="margin-top:14px">
+Ever Roll Fund, Inc. &middot; Florida nonprofit corporation &middot; EIN 42-3511117 &middot; Serving people with spinal cord injuries in all fifty states.<br>
+501(c)(3) application pending with the IRS - determination letter available on request. Grants are made at the discretion of the Ever Roll Fund board. Submitting an application does not guarantee an award.
+</p>
+</main>
+
+<footer>
+<div class="brand-name"><span class="ever">EVER</span> <span class="roll">ROLL</span> <span class="fund">FUND</span></div>
+<p>&copy; 2026 Ever Roll Fund, Inc. All rights reserved.</p>
+<p class="footer-tag">Disability Doesn't Mean Inability</p>
+<ul class="footer-nav">
+<li><a href="/#mission">Mission</a></li>
+<li><a href="/#problem">The Problem</a></li>
+<li><a href="/#about">Our Story</a></li>
+<li><a href="/#contact">Contact</a></li>
+<li><a href="/apply.html">Grant Form</a></li>
+<li><a href="Ever%20Roll%20Fund%20-%20Privacy%20Policy.pdf">Privacy Policy</a></li>
+<li><a href="Ever%20Roll%20Fund%20-%20Terms%20of%20Service.pdf">Terms of Service</a></li>
+<li><a href="accessibility.html">Accessibility</a></li>
+</ul>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ------------------------------------------------------------------
+     WHERE SUBMISSIONS GO
+     Replace the ID below with the dedicated Ever Roll Fund grant-application
+     Formspree form ID when it exists. Nothing else needs to change.
+  ------------------------------------------------------------------ */
+  var FORMSPREE_ENDPOINT = "https://formspree.io/f/xnjkjgzo";
+
+  var STORE_KEY = "erf-grant-application-v1";
+  var MAX_GRANT = 5000;
+
+  var form = document.getElementById("grant-form");
+  var steps = [].slice.call(form.querySelectorAll(".step"));
+  var exitScreen = document.getElementById("exit-screen");
+  var doneScreen = document.getElementById("done-screen");
+  var fill = document.getElementById("progress-fill");
+  var plabel = document.getElementById("progress-label");
+  var saveNote = document.getElementById("save-note");
+  var current = 0;
+
+  /* ---------- mobile nav ---------- */
+  var toggle = document.querySelector(".nav-toggle");
+  var pnav = document.getElementById("primary-nav");
+  if (toggle && pnav) {
+    toggle.addEventListener("click", function(){
+      var open = pnav.classList.toggle("open");
+      toggle.classList.toggle("open", open);
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  }
+
+  /* ---------- states ---------- */
+  var STATES = ["Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut","Delaware","District of Columbia","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada","New Hampshire","New Jersey","New Mexico","New York","North Carolina","North Dakota","Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina","South Dakota","Tennessee","Texas","Utah","Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming","American Samoa","Guam","Northern Mariana Islands","Puerto Rico","U.S. Virgin Islands"];
+  var stateSel = document.getElementById("state");
+  STATES.forEach(function(s){ var o=document.createElement("option"); o.textContent=s; stateSel.appendChild(o); });
+
+  /* ---------- dates ---------- */
+  function isoToday(){ var d=new Date(); var m=("0"+(d.getMonth()+1)).slice(-2); var day=("0"+d.getDate()).slice(-2); return d.getFullYear()+"-"+m+"-"+day; }
+  var today = isoToday();
+  ["dob","injury_date","quote_date"].forEach(function(id){ var el=document.getElementById(id); if(el) el.max=today; });
+  var signedDate = document.getElementById("signed_date");
+  if (signedDate && !signedDate.value) signedDate.value = today;
+
+  /* ---------- persistence ---------- */
+  var fields = [].slice.call(form.querySelectorAll("input,select,textarea"));
+  function save(){
+    try{
+      var data = {__step: current};
+      fields.forEach(function(el){
+        if (el.type === "radio") { if (el.checked) data[el.name] = el.value; }
+        else if (el.type === "checkbox") { data[el.name] = el.checked; }
+        else { data[el.name] = el.value; }
+      });
+      localStorage.setItem(STORE_KEY, JSON.stringify(data));
+      flashSaved();
+    }catch(e){ saveNote.textContent = "Saving is unavailable in this browser"; }
+  }
+  var flashTimer;
+  function flashSaved(){
+    saveNote.textContent = "Saved";
+    clearTimeout(flashTimer);
+    flashTimer = setTimeout(function(){ saveNote.textContent = "Your answers save in this browser"; }, 1600);
+  }
+  function restore(){
+    var raw;
+    try{ raw = localStorage.getItem(STORE_KEY); }catch(e){ return; }
+    if (!raw) return;
+    var data;
+    try{ data = JSON.parse(raw); }catch(e){ return; }
+    fields.forEach(function(el){
+      if (!(el.name in data)) return;
+      if (el.type === "radio") { if (data[el.name] === el.value) el.checked = true; }
+      else if (el.type === "checkbox") { el.checked = !!data[el.name]; }
+      else if (data[el.name]) { el.value = data[el.name]; }
+    });
+    if (typeof data.__step === "number" && data.__step > 0 && data.__step < steps.length) current = data.__step;
+  }
+
+  /* ---------- choice card visuals ---------- */
+  function paintChoices(){
+    [].forEach.call(form.querySelectorAll(".choice"), function(lab){
+      var inp = lab.querySelector("input");
+      lab.classList.toggle("sel", !!(inp && inp.checked));
+    });
+  }
+
+  /* ---------- conditional sections ---------- */
+  function val(name){ var el=form.querySelector('[name="'+name+'"]:checked'); return el ? el.value : ""; }
+  function show(el, on){ if(el) el.style.display = on ? "" : "none"; }
+  function syncConditionals(){
+    var role = val("filer_role");
+    show(document.getElementById("filer-details"), role && role !== "Person with the spinal cord injury");
+    var wc = val("working_with_clinician");
+    show(document.getElementById("clinician-name-wrap"), wc === "Yes" || wc === "Between providers");
+    show(document.getElementById("other-funds-detail"), val("other_funds") === "Yes");
+    show(document.getElementById("insider-detail"), val("insider") === "Yes");
+  }
+
+  /* ---------- money math ---------- */
+  function num(id){ var v = parseFloat((document.getElementById(id)||{}).value); return isNaN(v) ? 0 : v; }
+  function money(n){ return "$" + n.toLocaleString("en-US", {maximumFractionDigits:0}); }
+  function syncGap(){
+    var gap = num("cost_total") - num("cost_insurance") - num("cost_other");
+    if (gap < 0) gap = 0;
+    document.getElementById("gap-amt").textContent = money(gap);
+    var ask = num("cost_request");
+    var warn = document.getElementById("gap-warn");
+    var msg = "";
+    if (ask > MAX_GRANT) msg = "Our maximum grant is " + money(MAX_GRANT) + ". Please lower the amount you are asking us for.";
+    else if (ask > gap && gap >= 0 && num("cost_total") > 0) msg = "You are asking for more than the remaining gap of " + money(gap) + ". Double-check the numbers above.";
+    warn.textContent = msg;
+    warn.style.display = msg ? "" : "none";
+  }
+
+  /* ---------- validation ---------- */
+  var EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+  function visible(el){ return !!(el.offsetParent !== null || el.offsetWidth || el.offsetHeight); }
+  function clearQ(q){ q.classList.remove("invalid"); }
+  function failQ(q, msg){ q.classList.add("invalid"); if (msg){ var e=q.querySelector(".err"); if(e) e.textContent=msg; } }
+
+  function validateStep(idx){
+    var step = steps[idx];
+    var ok = true, firstBad = null;
+    [].forEach.call(step.querySelectorAll(".q"), function(q){
+      clearQ(q);
+      if (!visible(q)) return;
+      var isRequired = q.hasAttribute("data-required") || !!q.querySelector(".req");
+      var attest = q.querySelectorAll("input.attest");
+      if (attest.length){
+        var all = true;
+        [].forEach.call(attest, function(c){ if(!c.checked) all=false; });
+        if (!all){ failQ(q, "Please confirm all five."); ok=false; firstBad = firstBad||q; }
+        return;
+      }
+      var radios = q.querySelectorAll('input[type="radio"]');
+      if (radios.length){
+        if (isRequired && !q.querySelector('input[type="radio"]:checked')){ failQ(q, "Please choose one."); ok=false; firstBad = firstBad||q; }
+        return;
+      }
+      var input = q.querySelector("input,select,textarea");
+      if (!input) return;
+      var v = (input.value || "").trim();
+      if (isRequired && !v){ failQ(q, input.tagName === "SELECT" ? "Please choose an option." : "Required."); ok=false; firstBad = firstBad||q; return; }
+      if (!v) return;
+      if (input.type === "email" && !EMAIL.test(v)){ failQ(q, "Enter a valid email address."); ok=false; firstBad = firstBad||q; return; }
+      if (input.id === "zip" && !/^\d{5}(-\d{4})?$/.test(v)){ failQ(q, "Enter a 5-digit ZIP code."); ok=false; firstBad = firstBad||q; return; }
+      if (input.type === "tel" && v.replace(/\D/g,"").length < 10){ failQ(q, "Enter a phone number with area code."); ok=false; firstBad = firstBad||q; return; }
+      if (input.id === "cost_request" && parseFloat(v) > MAX_GRANT){ failQ(q, "Our maximum grant is " + money(MAX_GRANT) + "."); ok=false; firstBad = firstBad||q; return; }
+      if (input.id === "item_impact" && v.length < 25){ failQ(q, "Please give us a sentence or two - this is the answer that matters most."); ok=false; firstBad = firstBad||q; return; }
+      if (input.id === "hardship" && v.length < 25){ failQ(q, "A few sentences is plenty, but we do need something here."); ok=false; firstBad = firstBad||q; return; }
+    });
+    if (firstBad){
+      firstBad.scrollIntoView({behavior:"smooth", block:"center"});
+      var f = firstBad.querySelector("input,select,textarea");
+      if (f) try{ f.focus({preventScroll:true}); }catch(e){}
+    }
+    return ok;
+  }
+
+  /* ---------- eligibility gate ---------- */
+  function eligibilityProblem(){
+    if (val("elig_sci") === "No") return "Ever Roll Fund exists specifically for people with spinal cord injuries. That is a narrow mandate on purpose, and it means we are not able to fund this request.";
+    if (val("elig_us") === "No") return "We are only able to fund people who live in the United States, D.C., or a U.S. territory right now.";
+    if (val("elig_ins") === "No - I have not submitted it") return "We fund the gap insurance leaves behind, so we need your insurer's answer first. File the claim even if you expect a denial - that denial is what unlocks most equipment grants, ours included. Come back to us with their response.";
+    if (val("elig_item") === "Not yet") return "We fund named items with a price on them, not general expenses. Get a written quote from a supplier or ATP for the specific item, then start the application again.";
+    return "";
+  }
+
+  /* ---------- step navigation ---------- */
+  function render(){
+    steps.forEach(function(s,i){ s.classList.toggle("active", i === current); });
+    exitScreen.classList.remove("show");
+    var pct = Math.round((current / 8) * 100);
+    fill.style.width = pct + "%";
+    plabel.textContent = current === 0 ? "Before you start" : "Step " + current + " of 8";
+    syncConditionals();
+    paintChoices();
+    syncGap();
+    window.scrollTo({top:0, behavior:"smooth"});
+  }
+
+  form.addEventListener("click", function(e){
+    var next = e.target.closest("[data-next]");
+    var back = e.target.closest("[data-back]");
+    if (next){
+      if (!validateStep(current)) return;
+      if (current === 1){
+        var problem = eligibilityProblem();
+        if (problem){
+          steps.forEach(function(s){ s.classList.remove("active"); });
+          document.getElementById("exit-reason").textContent = problem;
+          exitScreen.classList.add("show");
+          window.scrollTo({top:0, behavior:"smooth"});
+          return;
+        }
+      }
+      current = Math.min(current + 1, steps.length - 1);
+      save(); render();
+    } else if (back){
+      current = Math.max(current - 1, 0);
+      save(); render();
+    }
+  });
+
+  document.getElementById("exit-back").addEventListener("click", function(){
+    current = 1; render();
+  });
+
+  /* ---------- live wiring ---------- */
+  form.addEventListener("change", function(e){
+    if (e.target.id === "perm_private" && e.target.checked){
+      ["perm_story","perm_photo","perm_contact"].forEach(function(n){ var el=form.querySelector('[name="'+n+'"]'); if(el) el.checked=false; });
+    }
+    if (e.target.type === "checkbox" && e.target.checked && ["perm_story","perm_photo","perm_contact"].indexOf(e.target.name) > -1){
+      var p = document.getElementById("perm_private"); if (p) p.checked = false;
+    }
+    paintChoices(); syncConditionals(); syncGap(); save();
+  });
+  form.addEventListener("input", function(){ syncGap(); save(); });
+
+  /* ---------- submission ---------- */
+  function refId(){
+    var chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789", s = "";
+    for (var i=0;i<4;i++) s += chars.charAt(Math.floor(Math.random()*chars.length));
+    return "ERF-" + new Date().getFullYear() + "-" + s;
+  }
+  function labelFor(el){
+    var q = el.closest(".q");
+    if (!q) return el.name;
+    if (q.getAttribute("data-name")) return q.getAttribute("data-name");
+    var l = q.querySelector("label,.q-title");
+    return l ? l.textContent.replace(/\*/g,"").trim() : el.name;
+  }
+  function collect(){
+    var out = [];
+    steps.forEach(function(step){
+      var heading = step.querySelector("h2");
+      var sec = heading ? heading.textContent.trim() : "";
+      var rows = [];
+      [].forEach.call(step.querySelectorAll(".q"), function(q){
+        if (!visible(q) && q.style.display === "none") return;
+        var name = q.getAttribute("data-name") || "";
+        var radios = q.querySelectorAll('input[type="radio"]');
+        if (radios.length){
+          var c = q.querySelector('input[type="radio"]:checked');
+          if (c) rows.push([name || labelFor(c), c.value]);
+          return;
+        }
+        var boxes = q.querySelectorAll('input[type="checkbox"]');
+        if (boxes.length){
+          var picked = [];
+          [].forEach.call(boxes, function(b){ if (b.checked) picked.push(b.value === "yes" ? "confirmed" : b.value); });
+          rows.push([name || "Checkboxes", picked.length ? picked.join("; ") : "none selected"]);
+          return;
+        }
+        var input = q.querySelector("input,select,textarea");
+        if (input && (input.value||"").trim()) rows.push([name || labelFor(input), input.value.trim()]);
+      });
+      if (rows.length) out.push([sec, rows]);
+    });
+    return out;
+  }
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    var errBox = document.getElementById("submit-error");
+    errBox.style.display = "none";
+    if (!validateStep(current)) return;
+
+    var btn = document.getElementById("submit-btn");
+    btn.disabled = true;
+    var originalText = btn.textContent;
+    btn.textContent = "Sending...";
+
+    var ref = refId();
+    var sections = collect();
+    var lines = ["EVER ROLL FUND - EQUIPMENT GRANT APPLICATION", "Reference: " + ref, ""];
+    sections.forEach(function(pair){
+      lines.push("== " + pair[0].toUpperCase() + " ==");
+      pair[1].forEach(function(r){ lines.push(r[0] + ": " + r[1]); });
+      lines.push("");
+    });
+    var gap = Math.max(0, num("cost_total") - num("cost_insurance") - num("cost_other"));
+    lines.push("== CALCULATED ==");
+    lines.push("Remaining gap after insurance and other funding: " + money(gap));
+
+    var applicant = (document.getElementById("first_name").value + " " + document.getElementById("last_name").value).trim();
+    var payload = {
+      "_subject": "GRANT APPLICATION " + ref + " - " + (applicant || "no name") + " - " + money(num("cost_request")) + " requested",
+      "Reference": ref,
+      "Applicant": applicant,
+      "email": document.getElementById("email").value,
+      "Phone": document.getElementById("phone").value,
+      "Item": document.getElementById("item_name").value,
+      "Amount requested": money(num("cost_request")),
+      "Remaining gap": money(gap),
+      "Supplier": document.getElementById("supplier_name").value,
+      "Full application": lines.join("\n")
+    };
+
+    fetch(FORMSPREE_ENDPOINT, {
+      method: "POST",
+      headers: {"Content-Type":"application/json","Accept":"application/json"},
+      body: JSON.stringify(payload)
+    }).then(function(res){
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      steps.forEach(function(s){ s.classList.remove("active"); });
+      exitScreen.classList.remove("show");
+      document.getElementById("ref-id").textContent = ref;
+      document.getElementById("done-email").textContent = payload.email || "your inbox";
+      doneScreen.classList.add("show");
+      document.getElementById("progress-wrap").style.display = "none";
+      fill.style.width = "100%";
+      try{ localStorage.removeItem(STORE_KEY); }catch(err){}
+      window.scrollTo({top:0, behavior:"smooth"});
+    }).catch(function(){
+      btn.disabled = false;
+      btn.textContent = originalText;
+      errBox.textContent = "We could not send your application just now. Please check your connection and try again. If it keeps failing, email inquiry@everrollfund.org and we will take your application by email - nothing you typed has been lost.";
+      errBox.style.display = "block";
+      errBox.scrollIntoView({behavior:"smooth", block:"center"});
+    });
+  });
+
+  /* ---------- boot ---------- */
+  restore();
+  render();
+})();
+</script>
+</body>
+</html>
