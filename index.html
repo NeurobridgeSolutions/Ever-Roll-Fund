@@ -39,6 +39,8 @@ nav ul li a{color:var(--ink);font-weight:600;font-size:.95rem;}
 nav ul li a:hover{color:var(--blue-dark);}
 .nav-donate{padding:10px 24px;border-radius:40px;background:var(--orange);color:#fff;font-weight:800;letter-spacing:.5px;}
 .nav-donate:hover{background:var(--orange-dark);color:#fff;}
+.nav-grant a{padding:10px 22px;border-radius:40px;background:var(--teal);color:#fff !important;font-weight:800;letter-spacing:.4px;display:inline-block;}
+.nav-grant a:hover{background:var(--teal-dark);}
 .hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#0f2a4a 0%,#174ea6 60%,#1aa6a0 100%);color:#fff;padding:90px 0 80px;text-align:center;}
 .hero-video{position:absolute;top:50%;left:50%;min-width:100%;min-height:100%;width:auto;height:auto;transform:translate(-50%,-50%);object-fit:cover;z-index:0;}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(15,42,74,.72),rgba(23,78,166,.55) 60%,rgba(26,166,160,.55));z-index:1;}
@@ -107,7 +109,7 @@ nav ul{gap:16px;}
     .nav-toggle.open span:nth-child(1){transform:translateY(8px) rotate(45deg);}
     .nav-toggle.open span:nth-child(2){opacity:0;}
     .nav-toggle.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg);}
-    @media(max-width:760px){
+    @media(max-width:860px){
       .nav{flex-wrap:nowrap;}
       .nav-toggle{display:flex;}
       #primary-nav{position:absolute;top:100%;right:0;left:0;background:rgba(255,255,255,.98);backdrop-filter:blur(6px);box-shadow:0 8px 18px rgba(0,0,0,.08);max-height:0;overflow:hidden;transition:max-height .3s ease;}
@@ -115,8 +117,10 @@ nav ul{gap:16px;}
       #primary-nav ul{flex-direction:column;align-items:stretch;gap:0;padding:8px 0;}
       #primary-nav ul li{width:100%;}
       #primary-nav ul li a{display:block;padding:14px 24px;font-size:1.05rem;}
-      #primary-nav ul li.nav-donate{margin:10px 24px;text-align:center;}
+      #primary-nav ul li.nav-donate{width:auto;margin:10px 24px;text-align:center;}
       #primary-nav ul li.nav-donate a{padding:0;}
+      #primary-nav ul li.nav-grant{width:auto;margin:10px 24px;text-align:center;}
+      #primary-nav ul li.nav-grant a{padding:12px 0;}
     }
     #erf-schedule-fab{position:fixed;right:24px;bottom:24px;z-index:2147483647;background:#f0a830;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:bold;text-decoration:none;padding:14px 22px;border-radius:50px;box-shadow:0 4px 14px rgba(0,0,0,0.25);transition:transform 0.15s ease,box-shadow 0.15s ease;}
     #erf-schedule-fab:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,0.3);}
@@ -168,6 +172,7 @@ nav ul{gap:16px;}
 <li><a href="#problem">The Problem</a></li>
 <li><a href="#about">Our Story</a></li>
 <li><a href="#contact">Contact</a></li>
+<li class="nav-grant"><a href="/apply.html">Grant Form</a></li>
 <!-- TEMP: donate hidden pending IRS verification -->
 <!-- <li><a href="https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-16626" target="_blank" rel="noopener" class="nav-donate">DONATE</a></li> -->
 </ul>
@@ -325,6 +330,7 @@ nav ul{gap:16px;}
 <li><a href="#problem">The Problem</a></li>
 <li><a href="#about">Our Story</a></li>
 <li><a href="#contact">Contact</a></li>
+<li><a href="/apply.html">Grant Form</a></li>
 <li><a href="/Ever%20Roll%20Fund%20-%20Privacy%20Policy.pdf" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
 <li><a href="/Ever%20Roll%20Fund%20-%20Terms%20of%20Service.pdf" target="_blank" rel="noopener noreferrer">Terms of Service</a></li><li><a href="/accessibility.html" target="_blank" rel="noopener noreferrer">Accessibility</a></li>
 <!-- TEMP: donate hidden pending IRS verification -->
