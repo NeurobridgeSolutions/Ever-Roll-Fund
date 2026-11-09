@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donate - Ever Roll Fund</title>
+<meta name="description" content="Support Ever Roll Fund. Your tax-deductible gift helps people with physical disabilities get the mobility equipment insurance won't cover.">
+<meta property="og:title" content="Donate - Ever Roll Fund">
+<meta property="og:description" content="Your tax-deductible gift helps people with physical disabilities get the mobility equipment insurance won't cover.">
+<meta property="og:image" content="https://everrollfund.org/logo.png">
+<meta property="og:url" content="https://everrollfund.org/donate.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/logo.png">
+<link rel="apple-touch-icon" href="/logo.png">
+<style>
+:root{--blue:#1f6feb;--blue-dark:#174ea6;--navy:#0f2a4a;--teal:#1aa6a0;--teal-dark:#127f7a;--orange:#f0a93f;--orange-dark:#d8902a;--ink:#1b2733;--muted:#5b6671;--bg:#ffffff;--bg-soft:#eef4fb;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Segoe UI',Helvetica,Arial,sans-serif;color:var(--ink);line-height:1.6;background:var(--bg);}
+a{color:var(--blue-dark);text-decoration:none;}
+img{max-width:100%;display:block;}
+.container{max-width:1080px;margin:0 auto;padding:0 24px;}
+header{position:sticky;top:0;background:rgba(255,255,255,.97);backdrop-filter:blur(6px);box-shadow:0 1px 8px rgba(0,0,0,.06);z-index:100;}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:12px 24px;max-width:1080px;margin:0 auto;position:relative;}
+.brand{display:flex;align-items:center;gap:12px;}
+.brand img{height:54px;width:auto;}
+.brand-name{font-weight:800;font-size:1.15rem;}
+.brand-name .ever{color:var(--blue);}
+.brand-name .roll,.brand-name .fund{color:var(--orange);}
+nav ul{display:flex;list-style:none;gap:26px;align-items:center;}
+nav ul li a{color:var(--ink);font-weight:600;font-size:.95rem;}
+nav ul li a:hover{color:var(--blue-dark);}
+.nav-donate{padding:10px 24px;border-radius:40px;background:var(--orange);color:#fff;font-weight:800;letter-spacing:.5px;}
+.nav-donate:hover{background:var(--orange-dark);color:#fff;}
+.nav-grant a{padding:10px 22px;border-radius:40px;background:var(--teal);color:#fff !important;font-weight:800;letter-spacing:.4px;display:inline-block;}
+.nav-grant a:hover{background:var(--teal-dark);}
+.nav-toggle{display:none;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;background:none;border:none;cursor:pointer;padding:8px;margin-left:auto;}
+.nav-toggle span{display:block;width:26px;height:3px;border-radius:3px;background:var(--ink);transition:transform .25s ease,opacity .25s ease;}
+.nav-toggle.open span:nth-child(1){transform:translateY(8px) rotate(45deg);}
+.nav-toggle.open span:nth-child(2){opacity:0;}
+.nav-toggle.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg);}
+
+.hero{background:linear-gradient(135deg,var(--navy) 0%,var(--blue-dark) 60%,var(--teal-dark) 100%);color:#fff;text-align:center;padding:64px 24px 72px;}
+.hero .eyebrow{display:inline-block;background:rgba(255,255,255,.14);color:#fff;font-weight:700;font-size:.8rem;letter-spacing:1.5px;text-transform:uppercase;padding:6px 14px;border-radius:40px;margin-bottom:18px;}
+.hero h1{font-size:clamp(2rem,4.5vw,2.9rem);line-height:1.15;margin-bottom:14px;}
+.hero h1 span{color:var(--orange);}
+.hero p{max-width:640px;margin:0 auto;font-size:1.08rem;color:#e3ecf7;}
+
+.give{background:var(--bg-soft);padding:56px 0 72px;}
+.give-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:36px;align-items:start;}
+.why h2{font-size:1.5rem;color:var(--navy);margin-bottom:16px;}
+.point{display:flex;gap:14px;background:#fff;border-radius:14px;padding:18px;margin-bottom:14px;box-shadow:0 2px 10px rgba(15,42,74,.06);}
+.point .num{flex:0 0 36px;height:36px;border-radius:50%;background:var(--teal);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;}
+.point h3{font-size:1rem;color:var(--navy);margin-bottom:2px;}
+.point p{font-size:.94rem;color:var(--muted);}
+.badge{margin-top:18px;background:#fff;border-left:4px solid var(--orange);border-radius:10px;padding:14px 16px;font-size:.92rem;color:var(--ink);}
+.badge strong{color:var(--navy);}
+.form-card{background:#fff;border-radius:18px;box-shadow:0 8px 28px rgba(15,42,74,.10);overflow:hidden;}
+.form-card .bar{background:var(--orange);color:#fff;font-weight:800;text-align:center;padding:12px;letter-spacing:.5px;}
+.zeffy-wrap{position:relative;overflow:hidden;height:1200px;width:100%;}
+.zeffy-wrap iframe{position:absolute;border:0;top:0;left:0;width:100%;height:100%;}
+.form-fallback{text-align:center;padding:14px;font-size:.9rem;color:var(--muted);border-top:1px solid #e6edf5;}
+
+.other{padding:56px 0;text-align:center;}
+.other h2{color:var(--navy);font-size:1.4rem;margin-bottom:8px;}
+.other p{color:var(--muted);max-width:620px;margin:0 auto 18px;}
+.btn{display:inline-block;padding:14px 30px;border-radius:40px;font-weight:700;letter-spacing:.5px;transition:transform .15s ease,box-shadow .15s ease;}
+.btn-blue{background:var(--blue);color:#fff;}
+.btn-blue:hover{background:var(--blue-dark);transform:translateY(-2px);box-shadow:0 8px 18px rgba(31,111,235,.35);}
+
+.disclosure{background:#f7f9fc;border-top:1px solid #e6edf5;padding:28px 0;}
+.disclosure p{font-size:.78rem;color:var(--muted);line-height:1.55;max-width:900px;margin:0 auto;text-align:center;}
+
+footer{background:var(--navy);color:#cdd6e0;text-align:center;padding:40px 24px;}
+footer a{color:var(--orange);}
+.footer-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 26px;list-style:none;margin:22px 0 4px;padding:0;}
+.footer-nav li a{color:#cdd6e0;font-weight:600;font-size:.95rem;}
+.footer-nav li a:hover{color:var(--orange);}
+.footer-tag{color:#9ec5ff;font-style:italic;margin-top:6px;}
+
+@media(max-width:900px){
+.give-grid{grid-template-columns:1fr;}
+.form-card{order:-1;}
+}
+@media(max-width:860px){
+.nav-toggle{display:flex;}
+#primary-nav{position:absolute;top:100%;right:0;left:0;background:rgba(255,255,255,.98);backdrop-filter:blur(6px);box-shadow:0 8px 18px rgba(0,0,0,.08);max-height:0;overflow:hidden;transition:max-height .3s ease;}
+#primary-nav.open{max-height:520px;}
+#primary-nav ul{flex-direction:column;align-items:stretch;gap:0;padding:8px 0;}
+#primary-nav ul li{width:100%;}
+#primary-nav ul li a{display:block;padding:14px 24px;font-size:1.05rem;}
+#primary-nav ul li.nav-grant,#primary-nav ul li.nav-donate-li{width:auto;margin:10px 24px;text-align:center;}
+#primary-nav ul li.nav-grant a,#primary-nav ul li.nav-donate-li a{padding:12px 0;}
+}
+@media(max-width:480px){.zeffy-wrap{height:1350px;}.hero{padding:48px 20px 56px;}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="nav">
+<a class="brand" href="/" aria-label="Ever Roll Fund home">
+<img src="logo.png" alt="Ever Roll Fund logo">
+<span class="brand-name"><span class="ever">EVER</span> <span class="roll">ROLL</span> <span class="fund">FUND</span></span>
+</a>
+<button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
+<nav id="primary-nav">
+<ul>
+<li><a href="/#mission">Mission</a></li>
+<li><a href="/#problem">The Problem</a></li>
+<li><a href="/#about">Our Story</a></li>
+<li><a href="/#contact">Contact</a></li>
+<li class="nav-grant"><a href="/apply.html">Grant Form</a></li>
+<li class="nav-donate-li"><a href="/donate.html" class="nav-donate" aria-current="page">DONATE</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<main>
+<section class="hero">
+<span class="eyebrow">Tax-deductible 501(c)(3) gift</span>
+<h1>Give mobility. <span>Give independence.</span></h1>
+<p>Insurance often stops short of the wheelchairs, exoskeletons, and adaptive equipment people need to live fully. Your gift helps close that gap.</p>
+</section>
+
+<section class="give">
+<div class="container give-grid">
+<div class="why">
+<h2>Where your gift goes</h2>
+<div class="point"><div class="num">1</div><div><h3>Equipment grants</h3><p>We fund the gap between what insurance covers and the cost of life-changing mobility technology.</p></div></div>
+<div class="point"><div class="num">2</div><div><h3>Paid directly to the manufacturer</h3><p>Grant funds go straight to the equipment manufacturer, never to individuals, so every dollar is tied to a real device.</p></div></div>
+<div class="point"><div class="num">3</div><div><h3>A fund that keeps giving</h3><p>Gifts help build a sustainable resource for the disabled community, not a one-time payout.</p></div></div>
+<div class="badge"><strong>No fees taken from your gift.</strong> Donations are processed by Zeffy, which charges Ever Roll Fund no platform or card fees. You will receive an emailed tax receipt right away.</div>
+</div>
+
+<div class="form-card">
+<div class="bar">Make your donation</div>
+<div class="zeffy-wrap">
+<iframe title="Donation form powered by Zeffy" src="https://www.zeffy.com/en-US/embed/donation-form/donate-to-change-lives-16626" allowpaymentrequest allowtransparency="true" loading="eager"></iframe>
+</div>
+<div class="form-fallback">Form not loading? <a href="https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-16626" target="_blank" rel="noopener">Donate securely on Zeffy</a></div>
+</div>
+</div>
+</section>
+
+<section class="other">
+<div class="container">
+<h2>Corporate, foundation, or larger gifts</h2>
+<p>Interested in a sponsorship, matching gift, or donating by check? We would love to talk.</p>
+<a class="btn btn-blue" href="mailto:kortlund@everrollfund.org?subject=Supporting%20Ever%20Roll%20Fund">Contact Us</a>
+<p style="margin-top:14px;font-size:.92rem;">Kortlund Natterstad, Co-Founder &middot; <a href="tel:+13054142269">305-414-2269</a></p>
+</div>
+</section>
+
+<section class="disclosure">
+<div class="container">
+<p>Ever Roll Fund Inc. is a 501(c)(3) nonprofit organization. Contributions are tax-deductible to the extent allowed by law. No goods or services are provided in exchange for your donation.</p>
+<p style="margin-top:10px;">Florida Registration #CH85847. A COPY OF THE OFFICIAL REGISTRATION AND FINANCIAL INFORMATION MAY BE OBTAINED FROM THE DIVISION OF CONSUMER SERVICES BY CALLING TOLL-FREE (800-435-7352) WITHIN THE STATE OR VISITING www.FloridaConsumerHelp.com. REGISTRATION DOES NOT IMPLY ENDORSEMENT, APPROVAL, OR RECOMMENDATION BY THE STATE.</p>
+</div>
+</section>
+</main>
+
+<footer>
+<span class="brand-name"><span class="ever">EVER</span> <span class="roll">ROLL</span> <span class="fund">FUND</span></span>
+<ul class="footer-nav">
+<li><a href="/#mission">Mission</a></li>
+<li><a href="/#problem">The Problem</a></li>
+<li><a href="/#about">Our Story</a></li>
+<li><a href="/#contact">Contact</a></li>
+<li><a href="/apply.html">Grant Form</a></li>
+<li><a href="/donate.html">Donate</a></li>
+<li><a href="/Ever%20Roll%20Fund%20-%20Privacy%20Policy.pdf" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
+<li><a href="/Ever%20Roll%20Fund%20-%20Terms%20of%20Service.pdf" target="_blank" rel="noopener noreferrer">Terms of Service</a></li>
+<li><a href="/accessibility.html" target="_blank" rel="noopener noreferrer">Accessibility</a></li>
+</ul>
+<p class="footer-tag">"Disability doesn't mean inability"</p>
+</footer>
+
+<script>
+(function(){
+  var t=document.querySelector('.nav-toggle'),n=document.getElementById('primary-nav');
+  if(!t||!n)return;
+  t.addEventListener('click',function(){
+    var o=n.classList.toggle('open');t.classList.toggle('open',o);t.setAttribute('aria-expanded',o?'true':'false');
+  });
+  n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){n.classList.remove('open');t.classList.remove('open');t.setAttribute('aria-expanded','false');});});
+})();
+</script>
+</body>
+</html>
