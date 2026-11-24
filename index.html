@@ -9,10 +9,10 @@
     <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "NGO", "@id": "https://everrollfund.org/#org", "name": "Ever Roll Fund", "legalName": "Ever Roll Fund, Inc.", "url": "https://everrollfund.org/", "logo": "https://everrollfund.org/logo.png", "description": "501(c)(3) nonprofit that makes equipment grants for people with spinal cord injuries in the United States, covering the gap insurance leaves. Grants are paid directly to the equipment manufacturer or DME supplier.", "taxID": "42-3511117", "nonprofitStatus": "Nonprofit501c3", "areaServed": {"@type": "Country", "name": "United States"}, "email": "kortlund@everrollfund.org", "telephone": "+1-305-414-2269", "slogan": "Disability doesn't mean inability", "founder": [{"@type": "Person", "name": "Kortlund Natterstad", "jobTitle": "Co-Founder & Director"}]}, {"@type": "WebSite", "@id": "https://everrollfund.org/#site", "url": "https://everrollfund.org/", "name": "Ever Roll Fund", "publisher": {"@id": "https://everrollfund.org/#org"}}]}</script>
     <meta property="og:title" content="Ever Roll Fund - Disability Doesn't Mean Inability">
     <meta property="og:description" content="501(c)(3) nonprofit making equipment grants for people with spinal cord injuries - the gap insurance leaves. Apply or donate.">
-    <meta property="og:image" content="https://everrollfund.org/logo.png">
+    <meta property="og:image" content="https://everrollfund.org/og-image.png">
     <meta property="og:url" content="https://everrollfund.org/">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://everrollfund.org/logo.png">
+    <meta name="twitter:image" content="https://everrollfund.org/og-image.png">
     <link rel="icon" type="image/png" href="/logo.png">    <link rel="apple-touch-icon" href="/logo.png">
 <style>
 :root{--blue:#1f6feb;--blue-dark:#174ea6;--navy:#0f2a4a;--teal:#1aa6a0;--teal-dark:#127f7a;--orange:#f0a93f;--orange-dark:#d8902a;--ink:#1b2733;--muted:#5b6671;--bg:#ffffff;--bg-soft:#eef4fb;}
@@ -184,7 +184,7 @@ nav ul{gap:16px;}
 </div>
 </header>
 <section class="hero">
-<video class="hero-video" autoplay muted loop playsinline preload="auto" poster="logo.png">
+<video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="logo.png">
 <source src="Ever%20Roll%20Fund%20Background%20Video.mp4" type="video/mp4">
 </video>
 <div class="hero-overlay"></div>
@@ -203,12 +203,13 @@ nav ul{gap:16px;}
     <section class="sci-fact-banner" aria-label="Spinal cord injury facts">
       <div class="sci-fact-content">
         <span class="sci-fact-label">Did You Know?</span>
-        <p class="sci-fact-text fade-in" id="sci-fact-text" aria-live="polite">About every 30 minutes, someone in the U.S. sustains a new traumatic spinal cord injury (NSCISC, 2024).</p>
+        <p class="sci-fact-text fade-in" id="sci-fact-text" aria-live="polite">About every 30 minutes, someone in the U.S. sustains a new traumatic spinal cord injury.</p>
+        <p class="sci-fact-source" style="font-size:.75rem;opacity:.8;margin-top:6px;">Sources: <a href="https://www.nscisc.uab.edu/public/Facts%20and%20Figures%202024%20-%20Final.pdf" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">NSCISC Facts and Figures at a Glance, 2024</a>; <a href="https://www.christopherreeve.org/todays-care/paralysis-help-overview/stats-about-paralysis/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Reeve Foundation, 2013 paralysis study</a>. Costs in 2023 dollars.</p>
       </div>
     </section>
     <script>
       (function(){
-        var facts = ["About every 30 minutes, someone in the U.S. sustains a new traumatic spinal cord injury (NSCISC, 2024).","The lifetime cost of a spinal cord injury can exceed $5 million.","5.4 million Americans live with paralysis - about 1 in every 50 people.","A single power wheelchair can cost over $40,000 - more than a brand-new car.","First-year care after a spinal cord injury can top $1.2 million.","Nearly 1 in 4 spinal cord injuries happens to someone under age 25.","About 18,000 new spinal cord injuries occur in the U.S. every year.","302,000 people in the U.S. are living with a spinal cord injury right now.","78% of new spinal cord injuries happen to men.","Only 30% of people with a spinal cord injury are employed after their injury.","Fewer than 1% of SCI patients fully recover neurological function before leaving the hospital.","Adapting 1 vehicle for a wheelchair user can cost as much as $80,000.","Nearly 30% of people with SCI are re-hospitalized at least once every year.","The average age at spinal cord injury has climbed from 29 to 43.","1 specialized cushion to prevent pressure sores can cost hundreds - and go uncovered.","Over 50% of standing frames and exoskeletons are denied by insurers as 'experimental.'","Home accessibility upgrades can run $10,000-$100,000, and are almost never reimbursed.","Insurance appeals for a denied device can take 3 to 6 months to resolve.","Falls now cause over 30% of new spinal cord injuries - and the share is rising.","1 grant for the right device can be the difference between dependence and independence."];
+        var facts = ["About every 30 minutes, someone in the U.S. sustains a new traumatic spinal cord injury.", "About 18,000 new traumatic spinal cord injuries occur in the U.S. every year.", "About 305,000 people in the U.S. are living with a traumatic spinal cord injury.", "The average age at spinal cord injury has risen from 29 in the 1970s to 43 today.", "About 79% of new traumatic spinal cord injuries happen to men.", "Falls cause about 32% of new spinal cord injuries, second only to vehicle crashes.", "First-year costs for a high cervical injury average about $1.37 million.", "Lifetime costs for high tetraplegia at age 25 are estimated at about $6.1 million.", "About 30% of people with a spinal cord injury are re-hospitalized in any given year.", "Only about 18% of people with a spinal cord injury are employed one year after injury.", "Less than 1% of people fully recover neurological function by hospital discharge.", "About 5.4 million Americans live with some form of paralysis - nearly 1 in 50 people.", "One grant for the right device can be the difference between dependence and independence."];
         var el = document.getElementById('sci-fact-text');
         if(!el) return;
         var i = 0;
@@ -251,8 +252,8 @@ nav ul{gap:16px;}
 <div class="container about-wrap">
 <h2 class="section-title">Meet <span class="accent">Kortlund</span></h2>
 <div class="story-photos">
-<figure><img src="kort-hospital.jpg" alt="Kortlund Natterstad recovering in the hospital after his accident"><figcaption>The beginning of a new chapter.</figcaption></figure>
-<figure><img src="kort-portrait.jpg" alt="Kortlund Natterstad today"><figcaption>Resilience and purpose today.</figcaption></figure>
+<figure><img loading="lazy" decoding="async" src="kort-hospital.jpg" alt="Kortlund Natterstad recovering in the hospital after his accident"><figcaption>The beginning of a new chapter.</figcaption></figure>
+<figure><img loading="lazy" decoding="async" src="kort-portrait.jpg" alt="Kortlund Natterstad today"><figcaption>Resilience and purpose today.</figcaption></figure>
 </div>
 <p class="founder-name">Kortlund Natterstad</p>
 <p class="founder-role">Co-Founder &amp; Director at the Ever Roll Fund</p>
@@ -266,13 +267,13 @@ nav ul{gap:16px;}
 <div class="container about-wrap">
 <h2 class="section-title">Meet <span class="accent">Natalia</span></h2>
 <div class="story-photos single">
-<figure><img src="natalia.jpg" alt="Natalia Natterstad"></figure>
+<figure><img loading="lazy" decoding="async" src="natalia.jpg" alt="Natalia Natterstad"></figure>
 </div>
 <p class="founder-name">Natalia Natterstad</p>
 <p class="founder-role">Director at the Ever Roll Fund</p>
 <p>Natalia Natterstad is originally from Moldova, a small country in Eastern Europe. She studied hard throughout school and, upon graduating from university, was granted a work-exchange program visa. Her first time in America was in Newport, Rhode Island, where she worked at a small hotel without knowing a single word of English.</p>
 <p>Over time, her English improved, and her work took her across the country - Wisconsin, South Carolina, Alaska, Florida, and beyond. Working in hospitality meant relocating every six months to wherever the opportunity was strongest. Eventually, Natalia made the pivotal decision to stay in America and build a life rooted in liberty and freedom. She is multilingual, speaking Romanian, Russian, Spanish, some French, and English.</p>
-<p>Just over three years ago, Natalia and Kortlund met on a dating app. They talked nearly every day for three weeks before meeting in person - and the rest, as they say, is history. They have been happily married for just over a year.</p>
+<p>Natalia and Kortlund met on a dating app and talked nearly every day for three weeks before meeting in person - and the rest, as they say, is history. Today they are happily married.</p>
 <p>Natalia brings that same drive to the Ever Roll Fund, where she serves as a Director.</p>
 </div>
 </section>
@@ -280,7 +281,7 @@ nav ul{gap:16px;}
       <div class="container about-wrap">
         <h2 class="section-title">Meet <span class="accent">Ryan</span></h2>
         <div class="story-photos single">
-          <figure><img src="ryan.jpg" alt="Ryan Gebauer"></figure>
+          <figure><img loading="lazy" decoding="async" src="ryan.jpg" alt="Ryan Gebauer"></figure>
         </div>
         <p class="founder-name">Ryan Gebauer</p>
         <p class="founder-role">Director at the Ever Roll Fund</p>
@@ -334,8 +335,8 @@ nav ul{gap:16px;}
 <li><a href="#about">Our Story</a></li>
 <li><a href="#contact">Contact</a></li>
 <li><a href="/apply.html">Grant Form</a></li>
-<li><a href="/Ever%20Roll%20Fund%20-%20Privacy%20Policy.pdf" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
-<li><a href="/Ever%20Roll%20Fund%20-%20Terms%20of%20Service.pdf" target="_blank" rel="noopener noreferrer">Terms of Service</a></li><li><a href="/accessibility.html" target="_blank" rel="noopener noreferrer">Accessibility</a></li>
+<li><a href="/privacy.html">Privacy Policy</a></li>
+<li><a href="/terms.html">Terms of Service</a></li><li><a href="/accessibility.html" target="_blank" rel="noopener noreferrer">Accessibility</a></li>
 <li><a href="/donate.html">Donate</a></li>
 </ul>
 <p class="footer-tag">&ldquo;Disability doesn't mean inability&rdquo;</p>
