@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/Ever Roll Fund - Privacy Policy.pdf",
+      "destination": "/privacy.html",
+      "permanent": true
+    },
+    {
+      "source": "/Ever Roll Fund - Terms of Service.pdf",
+      "destination": "/terms.html",
+      "permanent": true
+    }
+  ]
+}
