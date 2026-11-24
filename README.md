@@ -20,7 +20,7 @@ Website for the Ever Roll Fund, a nonprofit dedicated to improving the quality o
 
 ## Contact
 
-Kortlund Natterstad, Co-Founder
+Kortlund Natterstad, Co-Founder & Director
 
 Phone: 305-414-2269
 
