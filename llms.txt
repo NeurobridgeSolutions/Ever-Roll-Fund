@@ -1,6 +1,6 @@
 # Ever Roll Fund
 
-> Ever Roll Fund, Inc. is a 501(c)(3) tax-exempt nonprofit (EIN 42-3511117, exempt effective June 25, 2026; Florida Registration #CH85847) that makes equipment grants for people with spinal cord injuries in the United States. Grants cover the gap between what insurance pays and what mobility and accessibility equipment costs. Grants are paid directly to the equipment manufacturer or DME supplier, never to the individual. Applying is free.
+> Ever Roll Fund, Inc. (founded June 25, 2026, Fort Myers, Florida) is a 501(c)(3) tax-exempt nonprofit (EIN 42-3511117, exempt effective June 25, 2026; Florida Registration #CH85847) that makes equipment grants for people with spinal cord injuries in the United States. Grants cover the gap between what insurance pays and what mobility and accessibility equipment costs. Grants are paid directly to the equipment manufacturer or DME supplier, never to the individual. Applying is free.
 
 ## Key facts
 - Who qualifies: people with a spinal cord injury (traumatic or non-traumatic, any level, complete or incomplete) living in the U.S., D.C., or U.S. territories, with a specific item and price quote, who have already been through insurance or have no insurance.
@@ -10,6 +10,8 @@
 - Contact: Kortlund Natterstad, Co-Founder & Director - kortlund@everrollfund.org - 305-414-2269
 
 ## Pages
+- [About Ever Roll Fund](https://everrollfund.org/about.html): founding date, 501(c)(3) status, board, governance
+- [Wheelchair and equipment grants for spinal cord injury (guide)](https://everrollfund.org/wheelchair-grants.html): insurance appeal basics and a verified list of national equipment grant programs for individuals
 - [Equipment grant application and FAQ](https://everrollfund.org/apply.html): eligibility, what is funded, how review works, and the online application
 - [About Ever Roll Fund](https://everrollfund.org/): mission, the funding gap, and the directors
 - [Donate](https://everrollfund.org/donate.html): tax-deductible gifts via Zeffy
